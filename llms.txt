@@ -74,5 +74,11 @@
 ## Rankings & editorial
 
 - [Rankings](https://www.india-selection.com/rankings.html): editorial, unpaid category rankings
+- [Best Indian Home Appliances brands](https://www.india-selection.com/rankings-appliances.html)
+- [Best Indian Consumer Electronics brands](https://www.india-selection.com/rankings-electronics.html)
+- [Best Indian Home & Kitchenware brands](https://www.india-selection.com/rankings-homeware.html)
+- [Best Indian Bedding & Mattresses brands](https://www.india-selection.com/rankings-bedding.html)
+- [Best Indian Packaged Food brands](https://www.india-selection.com/rankings-food.html)
+- [Best Indian Drinkware brands](https://www.india-selection.com/rankings-drinkware.html)
 - [Sitemap](https://www.india-selection.com/sitemap.xml)
 

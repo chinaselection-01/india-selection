@@ -1,265 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>India Selection — Curated Indian Goods</title>
-<meta name="description" content="India Selection — handpicked Indian brands and products, curated for the world. इंडिया सिलेक्शन — भारत के चुनिंदा ब्रांड और उत्पाद।" />
-<!--
-  ============================================================
-  LIVE FRAMEWORK — india-selection.com
-  Featured maker: UNIFLY Private Limited (New Delhi, est. 2020)
-  Still to do before full launch:
-  1. Logo  → DONE: Unifly real mark embedded (assets/unifly-logo.png)
-  2. Product photos  → DONE: 9 real Unifly photos in assets/ (brand-range + product-1..8)
-  3. Prices / currency (₹)  → ex-works per piece; confirm MOQ & lead time
-  4. Footer company info  → your trade company (e.g. 永康斯达瓦)
-  5. Newsletter / contact endpoints  → wire to your backend or form
-  Bilingual: every translatable string uses data-en / data-hi.
-  ============================================================
--->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="cart.css"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>India Selection — Curated Indian Brands &amp; Products | India Selection</title>
+<meta name="description" content="India Selection curates 55 trusted Indian brands across home appliances, consumer electronics, homeware, bedding, packaged food and drinkware — with brand reviews, real product photos and rankings. इंडिया सिलेक्शन 55 भारतीय ब्रांडों का चुनिंदा चयन।"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-  :root{
-    --saffron:#F4722B;
-    --saffron-dark:#D85A18;
-    --green:#0F7A4D;
-    --green-dark:#0B5E3B;
-    --marigold:#F4B400;
-    --cream:#FBF6EF;
-    --cream-2:#F3E9DA;
-    --ink:#2B2118;
-    --ink-soft:#6B5E4F;
-    --white:#FFFFFF;
-    --line:#E7D9C4;
-    --shadow:0 10px 30px rgba(43,33,24,.10);
-    --shadow-sm:0 4px 14px rgba(43,33,24,.08);
-    --radius:18px;
-    --maxw:1180px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:"Poppins","Noto Sans Devanagari",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    color:var(--ink);
-    background:var(--cream);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{text-decoration:none;color:inherit}
-  img{max-width:100%;display:block}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-  [lang="hi"] body,body.hi{font-family:"Noto Sans Devanagari","Poppins",sans-serif}
+:root{
+  --saffron:#F4722B; --saffron-dark:#D85A18;
+  --green:#0F7A4D; --green-dark:#0B5E3B;
+  --marigold:#F4B400; --cream:#FBF6EF; --cream-2:#F3E9DA;
+  --ink:#2B2118; --ink-soft:#6B5E4F; --white:#FFFFFF;
+  --line:#E7D9C4; --shadow:0 10px 30px rgba(43,33,24,.10);
+  --shadow-sm:0 4px 14px rgba(43,33,24,.08);
+  --radius:18px; --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Poppins","Noto Sans Devanagari",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+[lang="hi"] body,body.hi{font-family:"Noto Sans Devanagari","Poppins",sans-serif}
 
-  /* ---------- Demo ribbon ---------- */
-  .ribbon{
-    background:linear-gradient(90deg,var(--saffron),var(--marigold));
-    color:#fff;font-size:12.5px;font-weight:600;text-align:center;
-    padding:7px 14px;letter-spacing:.2px;
-  }
-  .ribbon span{opacity:.95}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:18px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px}
+.logo .dot{font-size:22px}
+.logo small{display:block;font-weight:500;font-size:11px;color:var(--ink-soft);letter-spacing:.3px}
+.links{margin-left:auto;display:flex;gap:22px;align-items:center}
+.links a{font-weight:600;font-size:14.5px;color:var(--ink-soft);transition:.2s}
+.links a:hover,.links a.active{color:var(--saffron-dark)}
+.lang-btn{margin-left:6px;border:1.5px solid var(--saffron);background:#fff;color:var(--saffron-dark);
+  font-weight:700;font-size:13px;padding:7px 14px;border-radius:30px;cursor:pointer;font-family:inherit}
+.burger{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink);margin-left:auto}
 
-  /* ---------- Header ---------- */
-  header.nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(251,246,239,.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-inner{display:flex;align-items:center;gap:18px;height:68px}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--ink)}
-  .logo .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--saffron),var(--marigold));display:grid;place-items:center;color:#fff;font-size:16px;box-shadow:var(--shadow-sm)}
-  .logo small{display:block;font-size:11px;font-weight:500;color:var(--ink-soft);letter-spacing:1px}
-  nav.links{margin-left:auto;display:flex;gap:26px;font-weight:500;font-size:15px}
-  nav.links a{color:var(--ink-soft);transition:color .2s}
-  nav.links a:hover{color:var(--saffron-dark)}
-  .lang-btn{
-    border:1.5px solid var(--line);background:var(--white);color:var(--ink);
-    font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;cursor:pointer;
-    transition:.2s;font-family:inherit;
-  }
-  .lang-btn:hover{border-color:var(--saffron);color:var(--saffron-dark)}
-  .burger{display:none;background:none;border:none;font-size:24px;cursor:pointer;margin-left:auto;color:var(--ink)}
+/* hero */
+.hero{background:linear-gradient(135deg,#FFF3E3,#FDE7CC);padding:60px 0 46px;border-bottom:1px solid var(--line)}
+.hero .badge{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;
+  font-size:12.5px;font-weight:700;padding:6px 14px;border-radius:30px;margin-bottom:16px}
+.hero h1{font-size:clamp(32px,4.6vw,50px);line-height:1.1;font-weight:800;max-width:840px}
+.hero h1 .accent{color:var(--saffron-dark)}
+.hero p.lead{margin-top:16px;max-width:720px;color:var(--ink-soft);font-size:17px}
+.hero .meta{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+.hero .meta span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:13px;font-weight:600}
+.hero .cta-row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;
+  border-radius:999px;cursor:pointer;border:none;transition:.2s;font-family:inherit}
+.btn-primary{background:var(--saffron);color:#fff;box-shadow:0 8px 20px rgba(244,114,43,.3)}
+.btn-primary:hover{background:var(--saffron-dark)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--green)}
 
-  /* ---------- Hero ---------- */
-  .hero{
-    position:relative;overflow:hidden;
-    background:
-      radial-gradient(900px 480px at 85% -10%,rgba(244,180,0,.28),transparent 60%),
-      radial-gradient(700px 420px at 0% 110%,rgba(15,122,77,.18),transparent 55%),
-      linear-gradient(180deg,#FFF7EC,#FBF6EF);
-    padding:74px 0 64px;
-  }
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-  .badge{
-    display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
-    color:var(--green-dark);font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px;
-    box-shadow:var(--shadow-sm);margin-bottom:20px;
-  }
-  .badge .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(15,122,77,.18)}
-  .hero h1{font-size:clamp(34px,5vw,56px);line-height:1.08;font-weight:800;letter-spacing:-.5px}
-  .hero h1 .accent{color:var(--saffron-dark)}
-  .hero p.lead{margin:20px 0 28px;font-size:18px;color:var(--ink-soft);max-width:520px}
-  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
-  .btn{
-    display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;
-    padding:14px 24px;border-radius:999px;cursor:pointer;border:none;transition:.2s;font-family:inherit;
-  }
-  .btn-primary{background:var(--saffron);color:#fff;box-shadow:0 8px 20px rgba(244,114,43,.32)}
-  .btn-primary:hover{background:var(--saffron-dark);transform:translateY(-1px)}
-  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
-  .btn-ghost:hover{border-color:var(--green)}
-  .hero-art{position:relative;display:grid;place-items:center;min-height:340px}
-  .hero-card{
-    background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:24px;width:330px;
-    transform:rotate(2deg);
-  }
-  .hero-card .ph-img{height:180px;border-radius:16px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
-  .hero-card .ph-img img{width:100%;height:100%;object-fit:contain;padding:12px;box-sizing:border-box;display:block}
-  .hero-card h4{margin-top:14px;font-size:17px}
-  .hero-card .price{color:var(--saffron-dark);font-weight:700;margin-top:4px}
-  .float-card{
-    position:absolute;background:#fff;border-radius:14px;box-shadow:var(--shadow);
-    padding:10px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;
-  }
-  .float-card.a{top:18px;left:-6px;transform:rotate(-4deg)}
-  .float-card.b{bottom:24px;right:-10px;transform:rotate(3deg)}
-  .float-card .ico{font-size:18px}
+/* category nav chips */
+.catnav{padding:26px 0 0}
+.catnav .chips{display:flex;flex-wrap:wrap;gap:10px}
+.catnav a{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;
+  font-weight:600;font-size:14px;transition:.2s}
+.catnav a:hover{border-color:var(--saffron);color:var(--saffron-dark);transform:translateY(-2px)}
 
-  /* ---------- Trust bar ---------- */
-  .trust{background:var(--green);color:#fff}
-  .trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;padding:26px 22px}
-  .trust .item{text-align:center;flex:1;min-width:140px}
-  .trust .num{font-size:28px;font-weight:800}
-  .trust .lbl{font-size:13px;opacity:.85;margin-top:2px}
+/* section */
+.sec{padding:46px 0}
+.sec-tag{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+  color:var(--saffron-dark);background:#FDEAD9;padding:5px 12px;border-radius:20px;margin-bottom:12px}
+.sec h2{font-size:30px;font-weight:800;margin-bottom:6px}
+.sec .sub{color:var(--ink-soft);max-width:760px;margin-bottom:26px;font-size:15px}
+.sec .viewall{font-weight:700;color:var(--saffron-dark);font-size:14.5px;margin-left:10px}
 
-  /* ---------- Section shell ---------- */
-  section{ padding:66px 0 }
-  .sec-head{max-width:680px;margin-bottom:38px}
-  .sec-tag{color:var(--saffron-dark);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
-  .sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;margin:10px 0 8px;letter-spacing:-.4px}
-  .sec-head p{color:var(--ink-soft);font-size:16px}
+/* brand grid */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:.2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .thumb{height:170px;background:var(--cream-2);display:grid;place-items:center;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .name{font-size:18px;font-weight:700}
+.card .tagline{color:var(--ink-soft);font-size:13.5px;min-height:38px}
+.card .more{margin-top:auto;font-weight:600;font-size:14px;color:var(--saffron-dark)}
 
-  /* ---------- Featured brand ---------- */
-  .featured{background:linear-gradient(180deg,#FFF7EC,#FBF6EF)}
-  .brand-spot{
-    display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:26px;overflow:hidden;
-    box-shadow:var(--shadow);border:1px solid var(--line);
-  }
-  .brand-spot .left{padding:42px;display:flex;flex-direction:column;justify-content:center}
-  .brand-logo{
-    background:#fff;border:1px solid var(--line);border-radius:16px;
-    padding:10px 14px;display:inline-flex;align-items:center;justify-content:center;
-    margin-bottom:18px;box-shadow:var(--shadow-sm);
-  }
-  .brand-logo img{height:64px;width:auto;display:block}
-  .brand-spot h3{font-size:30px;font-weight:800}
-  .brand-spot .tagline{color:var(--saffron-dark);font-weight:600;margin:6px 0 16px}
-  .brand-spot p{color:var(--ink-soft);font-size:15.5px}
-  .brand-meta{display:flex;gap:22px;margin:22px 0 26px;flex-wrap:wrap}
-  .brand-meta div .k{font-size:12px;color:var(--ink-soft)}
-  .brand-meta div .v{font-weight:700;font-size:15px}
-  .brand-spot .right{
-    background:linear-gradient(135deg,#0F7A4D,#0B5E3B);position:relative;overflow:hidden;min-height:420px;
-  }
-  .brand-spot .right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-  .brand-spot .right .badge{
-    position:absolute;left:22px;bottom:22px;z-index:2;background:rgba(11,94,59,.82);
-    color:#fff;font-size:13px;font-weight:700;padding:9px 15px;border-radius:999px;
-    border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(4px);
-  }
+/* picks */
+.picks{background:linear-gradient(135deg,#FFF7EC,#FBF6EF);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
-  /* ---------- Product grid ---------- */
-  .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:34px}
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
-    box-shadow:var(--shadow-sm);transition:.22s;display:flex;flex-direction:column;
-  }
-  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--saffron)}
-  .card .ph{height:190px;background:#fff;border-bottom:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
-  .card .ph img{width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box;display:block;transition:transform .3s}
-  .card:hover .ph img{transform:scale(1.04)}
-  .card .body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
-  .card .cat{font-size:11px;font-weight:700;color:var(--green);letter-spacing:.5px;text-transform:uppercase}
-  .card h4{font-size:16px;font-weight:700}
-  .card .desc{font-size:13px;color:var(--ink-soft);flex:1}
-  .card .foot{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
-  .card .price{font-weight:800;color:var(--ink)}
-  .card .view{font-size:13px;font-weight:600;color:var(--saffron-dark)}
+/* faq */
+.faq{padding:46px 0;background:#fff;border-top:1px solid var(--line)}
+.faq h2{font-size:30px;font-weight:800;margin-bottom:18px}
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--cream);overflow:hidden}
+.faq-item summary{padding:16px 20px;font-weight:600;font-size:15.5px;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--saffron-dark);font-weight:800;font-size:22px;line-height:1}
+.faq-item[open] summary::after{content:"-"}
+.faq-item .ans{padding:0 20px 18px;color:var(--ink-soft);font-size:15px;max-width:900px}
 
-  /* ---------- Categories ---------- */
-  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .cat-card{
-    position:relative;border-radius:var(--radius);overflow:hidden;min-height:200px;color:#fff;
-    display:flex;flex-direction:column;justify-content:flex-end;padding:24px;box-shadow:var(--shadow-sm);
-    transition:.22s;
-  }
-  .cat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-  .cat-card .emoji{position:absolute;top:18px;right:18px;font-size:42px;opacity:.9}
-  .cat-card h3{font-size:21px;font-weight:800}
-  .cat-card p{font-size:13.5px;opacity:.9}
-  .c1{background:linear-gradient(140deg,#F4722B,#D85A18)}
-  .c2{background:linear-gradient(140deg,#0F7A4D,#0B5E3B)}
-  .c3{background:linear-gradient(140deg,#E0A106,#C98A00)}
-  .c4{background:linear-gradient(140deg,#2A6FB0,#1E5288)}
-  .c5{background:linear-gradient(140deg,#B03A2E,#8C2D23)}
-  .c6{background:linear-gradient(140deg,#6B4FA8,#523C86)}
+footer{background:#221A12;color:#E9DFD2;padding:34px 0;margin-top:40px}
+.foot-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px}
+.foot-inner a{color:#F4B400}
 
-  /* ---------- Why ---------- */
-  .why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .why-item{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
-  .why-item .ico{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--saffron),var(--marigold));display:grid;place-items:center;font-size:24px;margin-bottom:16px}
-  .why-item h4{font-size:18px;font-weight:700;margin-bottom:8px}
-  .why-item p{font-size:14.5px;color:var(--ink-soft)}
-
-  /* ---------- Picks (种草) ---------- */
-  .picks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .pick{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
-  .pick .cover{height:160px;background:linear-gradient(135deg,#FFE7C2,#FFCF94);display:grid;place-items:center;font-size:46px}
-  .pick .pbody{padding:18px}
-  .pick .kicker{font-size:11px;font-weight:700;color:var(--saffron-dark);text-transform:uppercase;letter-spacing:.5px}
-  .pick h4{font-size:17px;font-weight:700;margin:6px 0}
-  .pick p{font-size:13.5px;color:var(--ink-soft)}
-  .pick .more{display:inline-block;margin-top:12px;color:var(--green-dark);font-weight:600;font-size:13.5px}
-
-  /* ---------- Newsletter ---------- */
-  .news{background:linear-gradient(135deg,var(--saffron),var(--marigold));color:#fff;border-radius:26px;padding:48px;text-align:center;margin:0 auto;max-width:920px}
-  .news h2{font-size:30px;font-weight:800}
-  .news p{opacity:.95;margin:10px auto 24px;max-width:520px}
-  .news form{display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-  .news input{flex:1;min-width:220px;padding:14px 18px;border-radius:999px;border:none;font-size:15px;font-family:inherit;color:var(--ink)}
-  .news .btn-sub{background:var(--green-dark);color:#fff;padding:14px 26px;border-radius:999px;font-weight:700;cursor:pointer;border:none;font-family:inherit}
-  .news .btn-sub:hover{background:#08432A}
-
-  /* ---------- Footer ---------- */
-  footer{background:var(--ink);color:#EADfd2;padding:54px 0 28px}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
-  footer h5{color:#fff;font-size:15px;font-weight:700;margin-bottom:14px}
-  footer a{display:block;color:#C9BCA8;font-size:14px;margin-bottom:9px;transition:.2s}
-  footer a:hover{color:var(--marigold)}
-  footer .about{font-size:14px;color:#C9BCA8;max-width:300px}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;font-size:13px;color:#9C8E79;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-
-  /* ---------- Responsive ---------- */
-  @media(max-width:920px){
-    .hero-grid{grid-template-columns:1fr}
-    .brand-spot{grid-template-columns:1fr}
-    .prod-grid{grid-template-columns:repeat(2,1fr)}
-    .cats,.why-grid,.picks{grid-template-columns:1fr}
-    nav.links{display:none}
-    .burger{display:block}
-    nav.links.open{display:flex;position:absolute;top:68px;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px 22px;gap:14px;border-bottom:1px solid var(--line)}
-  }
-  @media(max-width:560px){
-    .prod-grid{grid-template-columns:1fr}
-    .news{padding:34px 22px}
-    .foot-grid{grid-template-columns:1fr 1fr}
-  }
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}
+  .links{position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;gap:0;
+    border-bottom:1px solid var(--line);padding:0;max-height:0;overflow:hidden;transition:.25s}
+  .links.open{max-height:360px}
+  .links a{padding:13px 22px;border-top:1px solid var(--line);width:100%}
+  .burger{display:block}
+  .sec h2{font-size:24px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="cart.css"/>
 <!-- SEO-GEO-HEAD -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <link rel="manifest" href="site.webmanifest"/>
@@ -267,15 +121,15 @@
 <meta name="robots" content="index,follow,max-image-preview:large"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="India Selection"/>
-<meta property="og:title" content="India Selection — Curated Indian Goods"/>
-<meta property="og:description" content="India Selection showcases curated Indian brands and products — starting with insulated stainless-steel drinkware. Rankings, brand library and sourcing, in English and Hindi."/>
+<meta property="og:title" content="India Selection — Curated Indian Brands &amp; Products | India Selection"/>
+<meta property="og:description" content="India Selection curates 55 trusted Indian brands across home appliances, consumer electronics, homeware, bedding, packaged food and drinkware — with brand reviews, real product photos and rankings. इंडिया सिलेक्शन 55 भारतीय ब्रांडों का चुनिंदा चयन।"/>
 <meta property="og:url" content="./"/>
 <meta property="og:image" content="./assets/brand-range.jpg"/>
 <meta property="og:locale" content="en_IN"/>
 <meta property="og:locale:alternate" content="hi_IN"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="India Selection — Curated Indian Goods"/>
-<meta name="twitter:description" content="India Selection showcases curated Indian brands and products — starting with insulated stainless-steel drinkware. Rankings, brand library and sourcing, in English and Hindi."/>
+<meta name="twitter:title" content="India Selection — Curated Indian Brands &amp; Products | India Selection"/>
+<meta name="twitter:description" content="India Selection curates 55 trusted Indian brands across home appliances, consumer electronics, homeware, bedding, packaged food and drinkware — with brand reviews, real product photos and rankings. इंडिया सिलेक्शन 55 भारतीय ब्रांडों का चुनिंदा चयन।"/>
 <meta name="twitter:image" content="./assets/brand-range.jpg"/>
 <link rel="alternate" hreflang="x-default" href="./"/>
 <!-- SEO-GEO-JSONLD -->
@@ -289,16 +143,343 @@
       "name": "India Selection",
       "url": "./",
       "logo": "./favicon.svg",
+      "areaServed": "India",
       "description": "India Selection is an editorial curation platform showcasing curated Indian brands and products, beginning with insulated stainless-steel drinkware for global buyers."
     },
     {
-      "@type": "WebSite",
-      "@id": "./#website",
-      "url": "./",
-      "name": "India Selection",
-      "publisher": {
-        "@id": "./#organization"
-      }
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Atomberg",
+          "item": "./b-appliances-atomberg.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bajaj Electricals",
+          "item": "./b-appliances-bajaj.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Crompton",
+          "item": "./b-appliances-crompton.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Havells",
+          "item": "./b-appliances-havells.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "IFB",
+          "item": "./b-appliances-ifb.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Voltas",
+          "item": "./b-appliances-voltas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Fire-Boltt",
+          "item": "./b-electronics-fireboltt.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Lava",
+          "item": "./b-electronics-lava.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Micromax",
+          "item": "./b-electronics-micromax.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Noise",
+          "item": "./b-electronics-noise.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "boAt",
+          "item": "./b-electronics-boat.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "pTron",
+          "item": "./b-electronics-ptrON.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Amul",
+          "item": "./b-packaged-food-amul.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Balaji Wafers",
+          "item": "./b-packaged-food-balaji.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Bikanervala",
+          "item": "./b-packaged-food-bikanervala.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Britannia Industries",
+          "item": "./b-packaged-food-britannia.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Brooke Bond (HUL)",
+          "item": "./b-packaged-food-brookebond.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Cadbury (Mondelez India)",
+          "item": "./b-packaged-food-cadbury.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "DS Group (Pulse)",
+          "item": "./b-packaged-food-ds.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Haldiram's",
+          "item": "./b-packaged-food-haldiram.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "ITC (Sunfeast, Yippee!, Bingo!)",
+          "item": "./b-packaged-food-itc.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Lay's (PepsiCo India)",
+          "item": "./b-packaged-food-lays.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Lotte India",
+          "item": "./b-packaged-food-lotte.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Maggi (Nestlé)",
+          "item": "./b-packaged-food-maggi.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Nestlé India",
+          "item": "./b-packaged-food-nestle.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Parle Products",
+          "item": "./b-packaged-food-parle.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Patanjali Ayurved",
+          "item": "./b-packaged-food-patanjali.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Perfetti Van Melle",
+          "item": "./b-packaged-food-perfetti.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Priya Gold",
+          "item": "./b-packaged-food-priyagold.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Tata Tea (Tata Consumer)",
+          "item": "./b-packaged-food-tatatea.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Wagh Bakri",
+          "item": "./b-packaged-food-waghbakri.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Wai Wai (CG Foods)",
+          "item": "./b-packaged-food-waivai.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Bergner",
+          "item": "./b-homeware-bergner.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "Hawkins",
+          "item": "./b-homeware-hawkins.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "Nayasa",
+          "item": "./b-homeware-nayasa.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Pigeon",
+          "item": "./b-homeware-pigeon.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Signoraware",
+          "item": "./b-homeware-signoraware.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Vinod Cookware",
+          "item": "./b-homeware-vinod.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Borosil",
+          "item": "./brand-borosil.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Cello",
+          "item": "./brand-cello.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "HYV",
+          "item": "./brand-hyv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "InstaCuppa",
+          "item": "./brand-instacuppa.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Milton",
+          "item": "./brand-milton.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Nirlon Kitchenware",
+          "item": "./brand-nirlon.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Pexpo",
+          "item": "./brand-pexpo.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "SOLARA",
+          "item": "./brand-solara.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Tupperware India",
+          "item": "./brand-tupperware.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Unifly Private Limited",
+          "item": "./brand-unifly.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Vaya",
+          "item": "./brand-vaya.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Bombay Dyeing",
+          "item": "./b-bedding-bombaydyeing.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Kurlon",
+          "item": "./b-bedding-kurlon.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Sleepwell",
+          "item": "./b-bedding-sleepwell.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Spaces",
+          "item": "./b-bedding-spaces.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "The Sleep Company",
+          "item": "./b-bedding-sleepcompany.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Wakefit",
+          "item": "./b-bedding-wakefit.html"
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -319,7 +500,15 @@
           "name": "What is India Selection?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "India Selection is an editorial curation platform that showcases curated Indian brands and products — starting with insulated stainless-steel drinkware. We research, rank and present trusted Indian makers so global buyers can discover them."
+            "text": "India Selection is an editorial curation platform that showcases curated Indian brands and products across appliances, electronics, homeware, bedding, packaged food and drinkware — researched, ranked and presented so global buyers can discover trusted Indian makers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many Indian brands do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We track 55 Indian brands across six categories: home appliances, consumer electronics, home & kitchenware, bedding, packaged food and drinkware. Every brand has its own review & profile page with real product photos."
           }
         },
         {
@@ -332,18 +521,10 @@
         },
         {
           "@type": "Question",
-          "name": "How do you rank brands?",
+          "name": "Which Indian brand should I choose?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We rank by market presence, price accessibility, manufacturing capability, certifications (such as BIS/ISI) and D2C momentum. Rankings are editorial and updated periodically — always verify prices and certifications with the maker."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which Indian bottle brand is best?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For overall leadership, Milton and Cello dominate; for certified value, Pexpo; for premium BIS-certified and private-label sourcing, HYV; for wholesale/OEM, Nirlon and Unifly. See our Rankings page for the full picture."
+            "text": "It depends on your need — market leader, best value, premium design or wholesale/OEM. Browse by category, or open our Rankings page for best-by-budget and rising-D2C shortlists across every category."
           }
         }
       ]
@@ -353,421 +534,847 @@
 </script>
 </head>
 <body>
-
-<!-- ===== Demo ribbon ===== -->
-<div class="ribbon">
-  <span data-en="🚧 DEMO — real Unifly brand, logo & product photos are in. Confirm prices, MOQ and your company details before launch."
-        data-hi="🚧 डेमो — असली यूनिफ्लाई ब्रांड, लोगो और उत्पाद फ़ोटो लगे हैं। लॉन्च से पहले कीमतें, MOQ और कंपनी विवरण की पुष्टि करें।">🚧 DEMO — real Unifly brand, logo &amp; product photos are in. Confirm prices, MOQ and your company details before launch.</span>
-</div>
-
-<!-- ===== Header ===== -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="logo">
+    <a href="index.html" class="logo">
       <span class="dot">🇮🇳</span>
       <span>India Selection<small data-en="Curated Indian Goods" data-hi="भारत की चुनिंदा वस्तुएँ">Curated Indian Goods</small></span>
     </a>
     <nav class="links" id="navLinks">
-      <a href="#featured" data-en="Featured" data-hi="चुनिंदा">Featured</a>
-      <a href="#products" data-en="Shop" data-hi="खरीदें">Shop</a>
-      <a href="categories.html" data-en="Categories" data-hi="श्रेणियाँ">Categories</a>
-      <a href="brands.html" data-en="Brands" data-hi="ब्रांड">Brands</a>
-      <a href="#why" data-en="Why Us" data-hi="हम क्यों">Why Us</a>
-      <a href="#picks" data-en="Stories" data-hi="कहानियाँ">Stories</a>
-      <a href="rankings.html" data-en="Rankings" data-hi="रैंकिंग">Rankings</a>
-      <a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
-    </nav>
+  <a href="index.html" class="active" data-en="Home" data-hi="होम">Home</a>
+  <a href="categories.html" data-en="Categories" data-hi="श्रेणियाँ">Categories</a>
+  <a href="brands.html" data-en="Brands" data-hi="ब्रांड">Brands</a>
+  <a href="rankings.html" data-en="Rankings" data-hi="रैंकिंग">Rankings</a>
+  <a href="index.html#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
+</nav>
     <button class="lang-btn" id="langToggle">हिंदी</button>
     <button class="burger" id="burger" aria-label="menu">☰</button>
   </div>
 </header>
-
-<!-- ===== Hero ===== -->
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="badge"><span class="pulse"></span><span data-en="Handpicked from India" data-hi="भारत से चुनिंदा">Handpicked from India</span></span>
-      <h1 data-en="India’s finest, <span class='accent'>curated for you</span>."
-          data-hi="भारत का सर्वोत्तम, <span class='accent'>आपके लिए चुना गया</span>।">India’s finest, <span class="accent">curated for you</span>.</h1>
-      <p class="lead" data-en="A growing selection of authentic Indian brands and makers — drinkware, accessories and everyday goods, shipped worldwide."
-         data-hi="प्रामाणिक भारतीय ब्रांड और निर्माताओं का बढ़ता संग्रह — पेय पात्र, सहायक वस्तुएँ और रोज़मर्रा का सामान, दुनिया भर में भेजा जाता है।">A growing selection of authentic Indian brands and makers — drinkware, accessories and everyday goods, shipped worldwide.</p>
-      <div class="cta-row">
-        <a href="#products" class="btn btn-primary" data-en="Explore the selection" data-hi="चुनाव देखें">Explore the selection</a>
-        <a href="#featured" class="btn btn-ghost" data-en="Meet our brands" data-hi="हमारे ब्रांड मिलें">Meet our brands</a>
-      </div>
+<section class="hero">
+  <div class="wrap">
+    <span class="badge"><span>🇮🇳</span><span data-en="55 Indian brands · 6 categories" data-hi="55 भारतीय ब्रांड · 6 श्रेणियाँ">55 Indian brands · 6 categories</span></span>
+    <h1 data-en="The &lt;span class=&#x27;accent&#x27;&gt;curated&lt;/span&gt; selection of Indian goods." data-hi="भारतीय वस्तुओं का &lt;span class=&#x27;accent&#x27;&gt;चुनिंदा&lt;/span&gt; चयन।">The <span class="accent">curated</span> selection of Indian goods.</h1>
+    <p class="lead" data-en="We research, rank and present trusted Indian brands — from market leaders to rising D2C names — across appliances, electronics, homeware, bedding, food and drinkware. Every brand has real product photos and an editorial profile." data-hi="हम भरोसेमंद भारतीय ब्रांडों को खोजते, रैंक करते और प्रस्तुत करते हैं — बाज़ार लीडर से लेकर उभरते D2C नाम तक।">We research, rank and present trusted Indian brands — from market leaders to rising D2C names — across appliances, electronics, homeware, bedding, food and drinkware. Every brand has real product photos and an editorial profile.</p>
+    <div class="meta">
+      <span data-en="Home Appliances" data-hi="होम अप्लायंसेज़">Home Appliances</span>
+      <span data-en="Consumer Electronics" data-hi="कंज़्यूमर इलेक्ट्रॉनिक्स">Consumer Electronics</span>
+      <span data-en="Home &amp; Kitchenware" data-hi="होम और किचनवेयर">Home &amp; Kitchenware</span>
+      <span data-en="Bedding" data-hi="बेडिंग">Bedding</span>
+      <span data-en="Packaged Food" data-hi="पैकेज्ड फ़ूड">Packaged Food</span>
+      <span data-en="Drinkware" data-hi="ड्रिंकवेयर">Drinkware</span>
     </div>
-    <div class="hero-art">
-      <div class="hero-card">
-        <div class="ph-img"><img src="assets/product-1.jpg" alt="Unifly NM001 double-wall stainless-steel water bottle 650ml" /></div>
-        <h4 data-en="Unifly vacuum steel bottle" data-hi="उनिफ्लाई वैक्यूम स्टील बोतल">Unifly vacuum steel bottle</h4>
-        <div class="price">₹ 340</div>
-      </div>
-      <div class="float-card a"><span class="ico">🌿</span><span data-en="Authentic" data-hi="प्रामाणिक">Authentic</span></div>
-      <div class="float-card b"><span class="ico">🚚</span><span data-en="Ships worldwide" data-hi="दुनिया भर भेजते हैं">Ships worldwide</span></div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#cat-0" data-en="Browse brands →" data-hi="ब्रांड ब्राउज़ करें →">Browse brands →</a>
+      <a class="btn btn-ghost" href="rankings.html" data-en="See rankings →" data-hi="रैंकिंग देखें →">See rankings →</a>
     </div>
   </div>
 </section>
-
-<!-- ===== Trust bar ===== -->
-<div class="trust">
+<section class="catnav">
   <div class="wrap">
-    <div class="item"><div class="num">120+</div><div class="lbl" data-en="Curated products" data-hi="चुनिंदा उत्पाद">Curated products</div></div>
-    <div class="item"><div class="num">35+</div><div class="lbl" data-en="Indian brands" data-hi="भारतीय ब्रांड">Indian brands</div></div>
-    <div class="item"><div class="num">4.8★</div><div class="lbl" data-en="Avg. rating" data-hi="औसत रेटिंग">Avg. rating</div></div>
-    <div class="item"><div class="num">90+</div><div class="lbl" data-en="Countries shipped" data-hi="देशों में भेजा">Countries shipped</div></div>
-  </div>
-</div>
-
-<!-- ===== Featured brand ===== -->
-<section class="featured" id="featured">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag" data-en="Featured Maker" data-hi="चुनिंदा निर्माता">Featured Maker</div>
-      <h2 data-en="Unifly Private Limited" data-hi="उनिफ्लाई प्राइवेट लिमिटेड">Unifly Private Limited</h2>
-      <p data-en="A New Delhi manufacturer of stainless-steel drinkware — our launch maker on India Selection."
-         data-hi="नई दिल्ली का स्टेनलेस स्टील पेय पात्र निर्माता — इंडिया सिलेक्शन पर हमारा लॉन्च निर्माता।">A New Delhi manufacturer of stainless-steel drinkware — our launch maker on India Selection.</p>
+    <div class="chips">    <a href="#cat-0">Home Appliances</a>
+    <a href="#cat-1">Consumer Electronics</a>
+    <a href="#cat-2">Home &amp; Kitchenware</a>
+    <a href="#cat-3">Bedding &amp; Mattresses</a>
+    <a href="#cat-4">Packaged Food</a>
+    <a href="#cat-5">Drinkware</a>
     </div>
-
-      <div class="brand-spot">
-        <div class="left">
-          <div class="brand-logo"><img src="assets/unifly-logo.png" alt="Unifly Private Limited logo — PURE EVERYDAY" /></div>
-          <h3 data-en="Unifly Private Limited" data-hi="उनिफ्लाई प्राइवेट लिमिटेड">Unifly Private Limited</h3>
-          <div class="tagline" data-en="PURE EVERYDAY · Stainless-steel drinkware" data-hi="PURE EVERYDAY · स्टेनलेस स्टील पेय पात्र">PURE EVERYDAY · Stainless-steel drinkware</div>
-          <p data-en="Founded in 2020 and based in New Delhi, Unifly makes double-wall stainless-steel water bottles, vacuum flasks and sippers. Part of a group with six manufacturing verticals and a drinkware capacity of 500,000–600,000 units a month. We selected them for consistent quality and real factory capability."
-             data-hi="2020 में स्थापित और नई दिल्ली में स्थित, उनिफ्लाई डबल-वॉल स्टेनलेस स्टील वाटर बोतलें, वैक्यूम फ्लास्क और सिपर बनाता है। छह निर्माण वर्टिकल वाले समूह का हिस्सा, मासिक 5–6 लाख यूनिट क्षमता। हमने उन्हें लगातार गुणवत्ता और असली फैक्ट्री क्षमता के लिए चुना।">Founded in 2020 and based in New Delhi, Unifly makes double-wall stainless-steel water bottles, vacuum flasks and sippers. Part of a group with six manufacturing verticals and a drinkware capacity of 500,000–600,000 units a month. We selected them for consistent quality and real factory capability.</p>
-          <div class="brand-meta">
-            <div><div class="k" data-en="Based in" data-hi="स्थित">Based in</div><div class="v" data-en="New Delhi, India" data-hi="नई दिल्ली, भारत">New Delhi, India</div></div>
-            <div><div class="k" data-en="Since" data-hi="से">Since</div><div class="v" data-en="2020" data-hi="2020">2020</div></div>
-            <div><div class="k" data-en="Specialty" data-hi="विशेषता">Specialty</div><div class="v" data-en="Steel drinkware" data-hi="स्टील पेय पात्र">Steel drinkware</div></div>
+  </div>
+</section>
+<section class="sec" id="cat-0">
+  <div class="wrap">
+    <div class="sec-tag" data-en="Home Appliances" data-hi="Home Appliances">Home Appliances</div>
+    <h2 data-en="Best Indian Home Appliances brands" data-hi="सर्वश्रेष्ठ भारतीय Home Appliances ब्रांड">Best Indian Home Appliances brands</h2>
+    <p class="sub" data-en="6 curated Indian Home Appliances brands we track — open any to see its full review, real product photos and rankings." data-hi="6 चुनिंदा भारतीय Home Appliances ब्रांड जिन पर हम नज़र रखते हैं — पूरी रिव्यू और रैंकिंग के लिए खोलें।">6 curated Indian Home Appliances brands we track — open any to see its full review, real product photos and rankings. <a class="viewall" href="cat-appliances.html" data-en="View all →" data-hi="सभी देखें →">View all →</a></p>
+    <div class="grid">      <div class="card">
+        <a class="card-link" href="b-appliances-atomberg.html">
+          <div class="thumb"><img src="assets/brands/appliances/atomberg/hero.svg" alt="Atomberg" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Atomberg</div>
+            <div class="tagline">The BLDC fan disruptor (Make-in-India)</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
           </div>
-          <a href="https://www.uniflysteelbottle.com/" target="_blank" rel="noopener" class="btn btn-primary" data-en="Visit Unifly →" data-hi="उनिफ्लाई देखें →">Visit Unifly →</a>
-          <a href="brand-unifly.html" class="btn btn-ghost" data-en="Brand profile →" data-hi="ब्रांड प्रोफाइल →">Brand profile →</a>
-        </div>
-        <div class="right">
-          <img src="assets/brand-range.jpg" alt="Unifly stainless-steel bottle range — five bottle shapes on display" />
-          <span class="badge" data-en="500,000+ units / month" data-hi="5 लाख+ यूनिट / माह">500,000+ units / month</span>
-        </div>
+        </a>
       </div>
+      <div class="card">
+        <a class="card-link" href="b-appliances-bajaj.html">
+          <div class="thumb"><img src="assets/brands/appliances/bajaj/hero.png" alt="Bajaj Electricals" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Bajaj Electricals</div>
+            <div class="tagline">The household name in Indian kitchens</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-appliances-crompton.html">
+          <div class="thumb"><img src="assets/brands/appliances/crompton/1.jpg" alt="Crompton" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Crompton</div>
+            <div class="tagline">The ceiling-fan category leader</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-appliances-havells.html">
+          <div class="thumb"><img src="assets/brands/appliances/havells/hero.svg" alt="Havells" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Havells</div>
+            <div class="tagline">Premium design meets energy efficiency</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-appliances-ifb.html">
+          <div class="thumb"><img src="assets/brands/appliances/ifb/hero.jpg" alt="IFB" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">IFB</div>
+            <div class="tagline">Front-load &amp; hard-water specialist</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-appliances-voltas.html">
+          <div class="thumb"><img src="assets/brands/appliances/voltas/hero.png" alt="Voltas" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Voltas</div>
+            <div class="tagline">The Tata-group cooling &amp; appliances name</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- ===== Products ===== -->
-<section id="products">
+<section class="sec" id="cat-1">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag" data-en="Shop the selection" data-hi="चुनाव खरीदें">Shop the selection</div>
-      <h2 data-en="Unifly steel drinkware" data-hi="उनिफ्लाई स्टील पेय पात्र">Unifly steel drinkware</h2>
-      <p data-en="Real products from Unifly Private Limited, New Delhi. Prices are ex-works per piece (₹) — confirm MOQ, lead time and colours with the maker."
-         data-hi="नई दिल्ली के उनिफ्लाई प्राइवेट लिमिटेड के असली उत्पाद। कीमतें ex-works प्रति पीस (₹) — MOQ, लीड टाइम और रंग निर्माता से पुष्टि करें।">Real products from Unifly Private Limited, New Delhi. Prices are ex-works per piece (₹) — confirm MOQ, lead time and colours with the maker.</p>
-    </div>
-
-    <div class="prod-grid">
-      <!-- real Unifly product photos (uniflysteelbottle.com) — ex-works ₹ per piece, confirm MOQ & colours -->
-      <div class="card">
-        <div class="ph"><img src="assets/product-1.jpg" alt="Unifly NM001 double-wall stainless-steel water bottle 650ml" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Double Wall" data-hi="डबल वॉल">Double Wall</div>
-          <h4 data-en="NM001 SS Water Bottle 650ml" data-hi="NM001 SS वाटर बोतल 650ml">NM001 SS Water Bottle 650ml</h4>
-          <div class="desc" data-en="Fluted double-wall steel bottle, ~650ml." data-hi="नालीदार डबल-वॉल स्टील बोतल, ~650ml।">Fluted double-wall steel bottle, ~650ml.</div>
-          <div class="foot"><span class="price">₹ 340</span><a href="https://www.uniflysteelbottle.com/stainless-steel-water-bottle.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
+    <div class="sec-tag" data-en="Consumer Electronics" data-hi="Consumer Electronics">Consumer Electronics</div>
+    <h2 data-en="Best Indian Consumer Electronics brands" data-hi="सर्वश्रेष्ठ भारतीय Consumer Electronics ब्रांड">Best Indian Consumer Electronics brands</h2>
+    <p class="sub" data-en="6 curated Indian Consumer Electronics brands we track — open any to see its full review, real product photos and rankings." data-hi="6 चुनिंदा भारतीय Consumer Electronics ब्रांड जिन पर हम नज़र रखते हैं — पूरी रिव्यू और रैंकिंग के लिए खोलें।">6 curated Indian Consumer Electronics brands we track — open any to see its full review, real product photos and rankings. <a class="viewall" href="cat-electronics.html" data-en="View all →" data-hi="सभी देखें →">View all →</a></p>
+    <div class="grid">      <div class="card">
+        <a class="card-link" href="b-electronics-fireboltt.html">
+          <div class="thumb"><img src="assets/brands/electronics/fireboltt/hero.png" alt="Fire-Boltt" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Fire-Boltt</div>
+            <div class="tagline">The budget-smartwatch disruptor</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
       <div class="card">
-        <div class="ph"><img src="assets/product-2.jpg" alt="Unifly vacuum bullet bottle 750ml" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Vacuum Flask" data-hi="वैक्यूम फ्लास्क">Vacuum Flask</div>
-          <h4 data-en="Vacuum Bullet Bottle 750ml" data-hi="वैक्यूम बुलेट बोतल 750ml">Vacuum Bullet Bottle 750ml</h4>
-          <div class="desc" data-en="Slim bullet flask, silver finish, 750ml." data-hi="पतला बुलेट फ्लास्क, सिल्वर फिनिश, 750ml।">Slim bullet flask, silver finish, 750ml.</div>
-          <div class="foot"><span class="price">₹ 335</span><a href="https://www.uniflysteelbottle.com/new-items.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
+        <a class="card-link" href="b-electronics-lava.html">
+          <div class="thumb"><img src="assets/brands/electronics/lava/hero.jpg" alt="Lava" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Lava</div>
+            <div class="tagline">Make-in-India smartphones</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
       <div class="card">
-        <div class="ph"><img src="assets/product-3.jpg" alt="Unifly vacuum cola bottle 500ml, stainless steel" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Double Wall" data-hi="डबल वॉल">Double Wall</div>
-          <h4 data-en="Vacuum Cola Bottle 500ml" data-hi="वैक्यूम कोला बोतल 500ml">Vacuum Cola Bottle 500ml</h4>
-          <div class="desc" data-en="Classic cola shape, screw cap." data-hi="क्लासिक कोला आकार, स्क्रू कैप।">Classic cola shape, screw cap.</div>
-          <div class="foot"><span class="price">₹ 280</span><a href="https://www.uniflysteelbottle.com/stainless-steel-bottle.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
+        <a class="card-link" href="b-electronics-micromax.html">
+          <div class="thumb"><img src="assets/brands/electronics/micromax/1.jpg" alt="Micromax" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Micromax</div>
+            <div class="tagline">The Indian comeback brand</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
       <div class="card">
-        <div class="ph"><img src="assets/product-4.jpg" alt="Unifly NM001 double-wall stainless-steel water bottle 850ml" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Double Wall" data-hi="डबल वॉल">Double Wall</div>
-          <h4 data-en="NM001 Water Bottle 850ml" data-hi="NM001 वाटर बोतल 850ml">NM001 Water Bottle 850ml</h4>
-          <div class="desc" data-en="Larger 850ml double-wall everyday bottle." data-hi="बड़ी 850ml डबल-वॉल रोज़मर्रा बोतल।">Larger 850ml double-wall everyday bottle.</div>
-          <div class="foot"><span class="price">₹ 380</span><a href="https://www.uniflysteelbottle.com/stainless-steel-water-bottle.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
+        <a class="card-link" href="b-electronics-noise.html">
+          <div class="thumb"><img src="assets/brands/electronics/noise/1.jpg" alt="Noise" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Noise</div>
+            <div class="tagline">India&#x27;s largest smartwatch brand</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
       <div class="card">
-        <div class="ph"><img src="assets/product-5.jpg" alt="Unifly vacuum bullet flask, full litre" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Vacuum Flask" data-hi="वैक्यूम फ्लास्क">Vacuum Flask</div>
-          <h4 data-en="Vacuum Bullet Bottle 1000ml" data-hi="वैक्यूम बुलेट बोतल 1000ml">Vacuum Bullet Bottle 1000ml</h4>
-          <div class="desc" data-en="Full-litre vacuum flask for long days." data-hi="लंबे दिनों के लिए पूरा लीटर वैक्यूम फ्लास्क।">Full-litre vacuum flask for long days.</div>
-          <div class="foot"><span class="price">₹ 350</span><a href="https://www.uniflysteelbottle.com/stainless-steel-water-bottle.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
+        <a class="card-link" href="b-electronics-boat.html">
+          <div class="thumb"><img src="assets/brands/electronics/boat/hero.png" alt="boAt" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">boAt</div>
+            <div class="tagline">India&#x27;s #1 by volume in audio &amp; wearables</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
       <div class="card">
-        <div class="ph"><img src="assets/product-6.jpg" alt="Unifly black sipper water bottle 1000ml with flip-top lid" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Sipper" data-hi="सिपर">Sipper</div>
-          <h4 data-en="Sipper Water Bottle 1000ml" data-hi="सिपर वाटर बोतल 1000ml">Sipper Water Bottle 1000ml</h4>
-          <div class="desc" data-en="One-touch sipper lid, gym &amp; office." data-hi="वन-टच सिपर लिड, जिम और ऑफिस।">One-touch sipper lid, gym &amp; office.</div>
-          <div class="foot"><span class="price">₹ 150</span><a href="https://www.uniflysteelbottle.com/water-bottle.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="ph"><img src="assets/product-7.jpg" alt="Unifly stainless-steel one-litre bottle, plain finish" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Value Line" data-hi="वैल्यू लाइन">Value Line</div>
-          <h4 data-en="Value Bottle S01 / S02 1000ml" data-hi="वैल्यू बोतल S01 / S02 1000ml">Value Bottle S01 / S02 1000ml</h4>
-          <div class="desc" data-en="Plain 1L entry bottle, great for bulk." data-hi="सादी 1L प्रवेश बोतल, बल्क के लिए बढ़िया।">Plain 1L entry bottle, great for bulk.</div>
-          <div class="foot"><span class="price">₹ 110</span><a href="https://www.uniflysteelbottle.com/ss-water-bottles.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="ph"><img src="assets/product-8.jpg" alt="Unifly vacuum flask 1000ml with carry strap" loading="lazy" /></div>
-        <div class="body">
-          <div class="cat" data-en="Vacuum Flask" data-hi="वैक्यूम फ्लास्क">Vacuum Flask</div>
-          <h4 data-en="Vacuum Flask with Strap 1000ml" data-hi="पट्टे वाला वैक्यूम फ्लास्क 1000ml">Vacuum Flask with Strap 1000ml</h4>
-          <div class="desc" data-en="1L insulated flask with carry strap." data-hi="कैरी पट्टे के साथ 1L इन्सुलेटेड फ्लास्क।">1L insulated flask with carry strap.</div>
-          <div class="foot"><span class="price" data-en="Get quote" data-hi="कोटेशन लें">Get quote</span><a href="https://www.uniflysteelbottle.com/water-bottle.html" target="_blank" rel="noopener" class="view" data-en="View →" data-hi="देखें →">View →</a></div>
-        </div>
+        <a class="card-link" href="b-electronics-ptrON.html">
+          <div class="thumb"><img src="assets/brand-range.jpg" alt="pTron" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">pTron</div>
+            <div class="tagline">Budget audio &amp; accessories, Made-in-India</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ===== Categories ===== -->
-<section id="categories" style="background:#fff;border-top:1px solid var(--line)">
+<section class="sec" id="cat-2">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag" data-en="Browse by category" data-hi="श्रेणी अनुसार देखें">Browse by category</div>
-      <h2 data-en="What we curate" data-hi="हम क्या चुनते हैं">What we curate</h2>
-    </div>
-    <div class="cats">
-      <a href="cat-appliances.html" class="cat-card c1">
-        <span class="emoji">🔌</span>
-        <h3 data-en="Home Appliances" data-hi="घरेलू उपकरण">Home Appliances</h3>
-        <p data-en="Mixers, fans, water heaters & more" data-hi="मिक्सर, पंखे, वॉटर हीटर और बहुत कुछ">Mixers, fans, water heaters &amp; more</p>
-      </a>
-      <a href="cat-electronics.html" class="cat-card c2">
-        <span class="emoji">🎧</span>
-        <h3 data-en="Consumer Electronics" data-hi="उपभोक्ता इलेक्ट्रॉनिक्स">Consumer Electronics</h3>
-        <p data-en="Earbuds, smartwatches & budget phones" data-hi="ईयरबड्स, स्मार्टवॉच और बजट फोन">Earbuds, smartwatches &amp; budget phones</p>
-      </a>
-      <a href="cat-bedding.html" class="cat-card c3">
-        <span class="emoji">🛏️</span>
-        <h3 data-en="Bedding & Mattresses" data-hi="बिस्तर और गद्दे">Bedding &amp; Mattresses</h3>
-        <p data-en="Mattresses and bedsheets for every home" data-hi="हर घर के लिए गद्दे और चादरें">Mattresses and bedsheets for every home</p>
-      </a>
-      <a href="cat-homeware.html" class="cat-card c4">
-        <span class="emoji">🍳</span>
-        <h3 data-en="Home & Kitchenware" data-hi="घर और रसोई का सामान">Home &amp; Kitchenware</h3>
-        <p data-en="Pressure cookers, cookware & storage" data-hi="प्रेशर कुकर, कुकवेयर और स्टोरेज">Pressure cookers, cookware &amp; storage</p>
-      </a>
-      <a href="cat-packaged-food.html" class="cat-card c5">
-        <span class="emoji">🍫</span>
-        <h3 data-en="Packaged Food" data-hi="पैकेज्ड फूड">Packaged Food</h3>
-        <p data-en="Chocolates, noodles, biscuits, snacks & tea" data-hi="चॉकलेट, नूडल्स, बिस्किट, स्नैक्स और चाय">Chocolates, noodles, biscuits, snacks &amp; tea</p>
-      </a>
-      <a href="brands.html" class="cat-card c6">
-        <span class="emoji">🍶</span>
-        <h3 data-en="Insulated Drinkware" data-hi="इन्सुलेटेड ड्रिंकवेयर">Insulated Drinkware</h3>
-        <p data-en="Milton, Cello, Borosil, Unifly & more" data-hi="मिल्टन, सेलो, बोरोसिल, यूनिफ्लाई और अधिक">Milton, Cello, Borosil, Unifly &amp; more</p>
-      </a>
+    <div class="sec-tag" data-en="Home &amp; Kitchenware" data-hi="Home &amp; Kitchenware">Home &amp; Kitchenware</div>
+    <h2 data-en="Best Indian Home &amp; Kitchenware brands" data-hi="सर्वश्रेष्ठ भारतीय Home &amp; Kitchenware ब्रांड">Best Indian Home &amp; Kitchenware brands</h2>
+    <p class="sub" data-en="6 curated Indian Home &amp; Kitchenware brands we track — open any to see its full review, real product photos and rankings." data-hi="6 चुनिंदा भारतीय Home &amp; Kitchenware ब्रांड जिन पर हम नज़र रखते हैं — पूरी रिव्यू और रैंकिंग के लिए खोलें।">6 curated Indian Home &amp; Kitchenware brands we track — open any to see its full review, real product photos and rankings. <a class="viewall" href="cat-homeware.html" data-en="View all →" data-hi="सभी देखें →">View all →</a></p>
+    <div class="grid">      <div class="card">
+        <a class="card-link" href="b-homeware-bergner.html">
+          <div class="thumb"><img src="assets/brands/homeware/bergner/1.jpg" alt="Bergner" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Bergner</div>
+            <div class="tagline">European premium steel cookware</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-homeware-hawkins.html">
+          <div class="thumb"><img src="assets/brands/homeware/hawkins/1.jpg" alt="Hawkins" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Hawkins</div>
+            <div class="tagline">The most trusted pressure cooker in India</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-homeware-nayasa.html">
+          <div class="thumb"><img src="assets/brands/homeware/nayasa/hero.jpg" alt="Nayasa" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Nayasa</div>
+            <div class="tagline">Modern plastic homeware &amp; storage</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-homeware-pigeon.html">
+          <div class="thumb"><img src="assets/brands/homeware/pigeon/hero.ico" alt="Pigeon" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Pigeon</div>
+            <div class="tagline">Honest value, the budget default</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-homeware-signoraware.html">
+          <div class="thumb"><img src="assets/brands/homeware/signoraware/1.jpg" alt="Signoraware" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Signoraware</div>
+            <div class="tagline">The plastic storage-container specialist</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-homeware-vinod.html">
+          <div class="thumb"><img src="assets/brands/homeware/vinod/1.jpg" alt="Vinod Cookware" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Vinod Cookware</div>
+            <div class="tagline">Trusted Indian stainless-steel since 1962</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- ===== Why ===== -->
-<section class="why" id="why">
+<section class="sec" id="cat-3">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag" data-en="Why India Selection" data-hi="इंडिया सिलेक्शन क्यों">Why India Selection</div>
-      <h2 data-en="We curate, you trust" data-hi="हम चुनते हैं, आप भरोसा करते हैं">We curate, you trust</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="ico">✅</div>
-        <h4 data-en="Curated, not crowded" data-hi="चुनिंदा, न कि भरा हुआ">Curated, not crowded</h4>
-        <p data-en="Every product is hand-picked and quality-checked. No endless scrolling." data-hi="हर उत्पाद हाथ से चुना और गुणवत्ता-जाँचा गया। बेतहाशा स्क्रॉलिंग नहीं।">Every product is hand-picked and quality-checked. No endless scrolling.</p>
+    <div class="sec-tag" data-en="Bedding &amp; Mattresses" data-hi="Bedding &amp; Mattresses">Bedding &amp; Mattresses</div>
+    <h2 data-en="Best Indian Bedding &amp; Mattresses brands" data-hi="सर्वश्रेष्ठ भारतीय Bedding &amp; Mattresses ब्रांड">Best Indian Bedding &amp; Mattresses brands</h2>
+    <p class="sub" data-en="6 curated Indian Bedding &amp; Mattresses brands we track — open any to see its full review, real product photos and rankings." data-hi="6 चुनिंदा भारतीय Bedding &amp; Mattresses ब्रांड जिन पर हम नज़र रखते हैं — पूरी रिव्यू और रैंकिंग के लिए खोलें।">6 curated Indian Bedding &amp; Mattresses brands we track — open any to see its full review, real product photos and rankings. <a class="viewall" href="cat-bedding.html" data-en="View all →" data-hi="सभी देखें →">View all →</a></p>
+    <div class="grid">      <div class="card">
+        <a class="card-link" href="b-bedding-bombaydyeing.html">
+          <div class="thumb"><img src="assets/brands/bedding/bombaydyeing/hero.ico" alt="Bombay Dyeing" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Bombay Dyeing</div>
+            <div class="tagline">140 years of Indian textile trust</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
-      <div class="why-item">
-        <div class="ico">🤝</div>
-        <h4 data-en="Real Indian makers" data-hi="असली भारतीय निर्माता">Real Indian makers</h4>
-        <p data-en="We work directly with brands and workshops across India." data-hi="हम भारत भर के ब्रांड और वर्कशॉप के सीधे साथ काम करते हैं।">We work directly with brands and workshops across India.</p>
+      <div class="card">
+        <a class="card-link" href="b-bedding-kurlon.html">
+          <div class="thumb"><img src="assets/brands/bedding/kurlon/hero.jpg" alt="Kurlon" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Kurlon</div>
+            <div class="tagline">Coir + foam firm-support specialist</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
-      <div class="why-item">
-        <div class="ico">🌍</div>
-        <h4 data-en="Ships worldwide" data-hi="दुनिया भर भेजते हैं">Ships worldwide</h4>
-        <p data-en="From India to your door, with tracking on every order." data-hi="भारत से आपके दरवाज़े तक, हर ऑर्डर पर ट्रैकिंग के साथ।">From India to your door, with tracking on every order.</p>
+      <div class="card">
+        <a class="card-link" href="b-bedding-sleepwell.html">
+          <div class="thumb"><img src="assets/brands/bedding/sleepwell/hero.png" alt="Sleepwell" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Sleepwell</div>
+            <div class="tagline">Legacy trust, largest offline network</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-bedding-spaces.html">
+          <div class="thumb"><img src="assets/brands/bedding/spaces/hero.png" alt="Spaces" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Spaces</div>
+            <div class="tagline">Premium cotton home textiles (Welspun)</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-bedding-sleepcompany.html">
+          <div class="thumb"><img src="assets/brands/bedding/sleepcompany/hero.jpg" alt="The Sleep Company" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">The Sleep Company</div>
+            <div class="tagline">SmartGRID adaptive sleep tech</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-bedding-wakefit.html">
+          <div class="thumb"><img src="assets/brands/bedding/wakefit/hero.png" alt="Wakefit" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Wakefit</div>
+            <div class="tagline">D2C value with a 100-night trial</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ===== Picks / Stories ===== -->
-<section id="picks">
+<section class="sec" id="cat-4">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag" data-en="Stories & picks" data-hi="कहानियाँ और चुनाव">Stories &amp; picks</div>
-      <h2 data-en="From the journal" data-hi="जर्नल से">From the journal</h2>
-      <p data-en="[PLACEHOLDER] Content pieces that drive discovery — gift guides, maker interviews, how-to." data-hi="[प्लेसहोल्डर] खोज को बढ़ावा देने वाली सामग्री — गिफ्ट गाइड, निर्माता साक्षात्कार, कैसे करें।">[PLACEHOLDER] Content pieces that drive discovery — gift guides, maker interviews, how-to.</p>
-    </div>
-    <div class="picks">
-      <div class="pick">
-        <div class="cover">🎁</div>
-        <div class="pbody">
-          <div class="kicker" data-en="Gift guide" data-hi="गिफ्ट गाइड">Gift guide</div>
-          <h4 data-en="10 Indian gifts under ₹1000" data-hi="₹1000 से कम के 10 भारतीय उपहार">10 Indian gifts under ₹1000</h4>
-          <p data-en="Thoughtful picks for every occasion." data-hi="हर अवसर के लिए विचारशील चुनाव।">Thoughtful picks for every occasion.</p>
-          <a href="#" class="more" data-en="Read more →" data-hi="और पढ़ें →">Read more →</a>
-        </div>
+    <div class="sec-tag" data-en="Packaged Food" data-hi="Packaged Food">Packaged Food</div>
+    <h2 data-en="Best Indian Packaged Food brands" data-hi="सर्वश्रेष्ठ भारतीय Packaged Food ब्रांड">Best Indian Packaged Food brands</h2>
+    <p class="sub" data-en="20 curated Indian Packaged Food brands we track — open any to see its full review, real product photos and rankings." data-hi="20 चुनिंदा भारतीय Packaged Food ब्रांड जिन पर हम नज़र रखते हैं — पूरी रिव्यू और रैंकिंग के लिए खोलें।">20 curated Indian Packaged Food brands we track — open any to see its full review, real product photos and rankings. <a class="viewall" href="cat-packaged-food.html" data-en="View all →" data-hi="सभी देखें →">View all →</a></p>
+    <div class="grid">      <div class="card">
+        <a class="card-link" href="b-packaged-food-amul.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/amul/hero.svg" alt="Amul" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Amul</div>
+            <div class="tagline">The taste of India&#x27;s dairy co-operative</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
-      <div class="pick">
-        <div class="cover">🏺</div>
-        <div class="pbody">
-          <div class="kicker" data-en="Maker story" data-hi="निर्माता कहानी">Maker story</div>
-          <h4 data-en="Inside Unifly’s factory" data-hi="उनिफ्लाई की फैक्ट्री के अंदर">Inside Unifly’s factory</h4>
-          <p data-en="How a small team builds better drinkware." data-hi="एक छोटी टीम बेहतर पेय पात्र कैसे बनाती है।">How a small team builds better drinkware.</p>
-          <a href="#" class="more" data-en="Read more →" data-hi="और पढ़ें →">Read more →</a>
-        </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-balaji.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/balaji/hero.png" alt="Balaji Wafers" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Balaji Wafers</div>
+            <div class="tagline">Gujarat&#x27;s wafers &amp; chips king</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
-      <div class="pick">
-        <div class="cover">🍵</div>
-        <div class="pbody">
-          <div class="kicker" data-en="How-to" data-hi="कैसे करें">How-to</div>
-          <h4 data-en="Keep your steel tumbler like new" data-hi="अपना स्टील टंबलर नया रखें">Keep your steel tumbler like new</h4>
-          <p data-en="Simple care that extends its life." data-hi="सरल देखभाल जो इसका जीवन बढ़ाती है।">Simple care that extends its life.</p>
-          <a href="#" class="more" data-en="Read more →" data-hi="और पढ़ें →">Read more →</a>
-        </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-bikanervala.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/bikanervala/hero.png" alt="Bikanervala" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Bikanervala</div>
+            <div class="tagline">Bhujia, namkeen &amp; sweets</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-britannia.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/britannia/hero.png" alt="Britannia Industries" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Britannia Industries</div>
+            <div class="tagline">Good Day, Tiger &amp; Marie</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-brookebond.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/brookebond/hero.ico" alt="Brooke Bond (HUL)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Brooke Bond (HUL)</div>
+            <div class="tagline">Red Label, Taj Mahal &amp; more</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-cadbury.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/cadbury/hero.svg" alt="Cadbury (Mondelez India)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Cadbury (Mondelez India)</div>
+            <div class="tagline">India&#x27;s favourite chocolate &amp; confectionery</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-ds.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/ds/hero.ico" alt="DS Group (Pulse)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">DS Group (Pulse)</div>
+            <div class="tagline">Home of the Pulse candy craze</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-haldiram.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/haldiram/hero.png" alt="Haldiram&#x27;s" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Haldiram&#x27;s</div>
+            <div class="tagline">India&#x27;s snacks &amp; sweets giant</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-itc.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/itc/hero.png" alt="ITC (Sunfeast, Yippee!, Bingo!)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">ITC (Sunfeast, Yippee!, Bingo!)</div>
+            <div class="tagline">Food &amp; lifestyle conglomerate</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-lays.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/lays/hero.ico" alt="Lay&#x27;s (PepsiCo India)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Lay&#x27;s (PepsiCo India)</div>
+            <div class="tagline">India&#x27;s #1 potato chips</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-lotte.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/lotte/hero.png" alt="Lotte India" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Lotte India</div>
+            <div class="tagline">Choco Pie &amp; confectionery</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-maggi.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/maggi/hero.svg" alt="Maggi (Nestlé)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Maggi (Nestlé)</div>
+            <div class="tagline">India&#x27;s instant-noodle icon</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-nestle.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/nestle/hero.jpg" alt="Nestlé India" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Nestlé India</div>
+            <div class="tagline">KitKat, Munch &amp; more — everywhere</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-parle.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/parle/hero.png" alt="Parle Products" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Parle Products</div>
+            <div class="tagline">The brand behind Parle-G &amp; more</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-patanjali.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/patanjali/hero.png" alt="Patanjali Ayurved" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Patanjali Ayurved</div>
+            <div class="tagline">Ayurvedic, desi instant meals</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-perfetti.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/perfetti/hero.ico" alt="Perfetti Van Melle" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Perfetti Van Melle</div>
+            <div class="tagline">Alpenliebe, Mentos &amp; Big Babol</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-priyagold.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/priyagold/hero.ico" alt="Priya Gold" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Priya Gold</div>
+            <div class="tagline">Value biscuits, pan-India</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-tatatea.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/tatatea/hero.png" alt="Tata Tea (Tata Consumer)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Tata Tea (Tata Consumer)</div>
+            <div class="tagline">India&#x27;s largest tea company</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-waghbakri.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/waghbakri/hero.png" alt="Wagh Bakri" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Wagh Bakri</div>
+            <div class="tagline">Gujarat&#x27;s beloved blend</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-waivai.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/waivai/hero.ico" alt="Wai Wai (CG Foods)" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Wai Wai (CG Foods)</div>
+            <div class="tagline">The eat-raw favourite noodle</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ===== Newsletter ===== -->
-<section id="contact">
+<section class="sec" id="cat-5">
   <div class="wrap">
-    <div class="news">
-      <h2 data-en="Get the weekly pick" data-hi="साप्ताहिक चुनाव पाएँ">Get the weekly pick</h2>
-      <p data-en="New Indian finds, maker stories and member-only offers — every week." data-hi="नए भारतीय चुनाव, निर्माता कहानियाँ और सदस्य-विशेष ऑफ़र — हर सप्ताह।">New Indian finds, maker stories and member-only offers — every week.</p>
-      <form onsubmit="return false;">
-        <input type="email" placeholder="you@email.com" aria-label="email" data-ph-en="you@email.com" data-ph-hi="आपका@ईमेल.कॉम" />
-        <button class="btn-sub" data-en="Subscribe" data-hi="सब्सक्राइब">Subscribe</button>
-      </form>
+    <div class="sec-tag" data-en="Drinkware" data-hi="Drinkware">Drinkware</div>
+    <h2 data-en="Best Indian Drinkware brands" data-hi="सर्वश्रेष्ठ भारतीय Drinkware ब्रांड">Best Indian Drinkware brands</h2>
+    <p class="sub" data-en="11 curated Indian Drinkware brands we track — open any to see its full review, real product photos and rankings." data-hi="11 चुनिंदा भारतीय Drinkware ब्रांड जिन पर हम नज़र रखते हैं — पूरी रिव्यू और रैंकिंग के लिए खोलें।">11 curated Indian Drinkware brands we track — open any to see its full review, real product photos and rankings. <a class="viewall" href="brands.html" data-en="View all →" data-hi="सभी देखें →">View all →</a></p>
+    <div class="grid">      <div class="card">
+        <a class="card-link" href="brand-borosil.html">
+          <div class="thumb"><img src="assets/brands/borosil/borosil-1.jpg" alt="Borosil" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Borosil</div>
+            <div class="tagline">Mumbai, founded 1962, Borosil grew from borosilicate lab glass into householdware. Its Hydra steel line (₹600–1,500) brings a strong warranty and holds 40–50% of India&#x27;s organised glass-bottle segment.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-cello.html">
+          <div class="thumb"><img src="assets/brands/cello/cello-1.jpg" alt="Cello" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Cello</div>
+            <div class="tagline">Cello World, Mumbai, runs 13 plants, 700+ distributors and 50,000 retail touchpoints across 65+ countries. It dominates the under-₹800 tier with honest pricing and a basic-but-dependable build.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-hyv.html">
+          <div class="thumb"><img src="assets/brands/hyv/hyv-1.png" alt="HYV" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">HYV</div>
+            <div class="tagline">HYV is India-made with 50,000+ units/month capacity and full-range BIS IS 17526:2021 certification. It takes branded orders from a 25-unit MOQ and custom colourways from 1,000 — a credible private-label partner and a rising D2C name.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-instacuppa.html">
+          <div class="thumb"><img src="assets/brands/instacuppa/instacuppa-1.jpg" alt="InstaCuppa" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">InstaCuppa</div>
+            <div class="tagline">InstaCuppa, Tirupati, since 2016, makes a one-hand sports sipper (400g body) with a 10-day trial. At similar price points it offers wider mouths than the legacy brands — a practical D2C pick for gym and travel.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-milton.html">
+          <div class="thumb"><img src="assets/brands/milton/milton-1.jpg" alt="Milton" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Milton</div>
+            <div class="tagline">Hamilton Housewares, Mumbai, founded in 1972. Milton&#x27;s Thermosteel is the generic name for insulated bottles in India — sold in 80+ countries with about 16.5% of the organised market (Ken Research). The bottle most Indian homes already own.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-nirlon.html">
+          <div class="thumb"><img src="assets/brands/nirlon/nirlon-1.jpg" alt="Nirlon Kitchenware" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Nirlon Kitchenware</div>
+            <div class="tagline">Nirlon Kitchenware, Palghar, Maharashtra, is a long-standing vacuum-insulated bottle manufacturer (Regal Touch, Loki lines) in 304-grade steel, with ex-works pricing from ~₹125–475/pc. A representative of India&#x27;s organised manufacturing tail.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-pexpo.html">
+          <div class="thumb"><img src="assets/brands/pexpo/pexpo-1.jpg" alt="Pexpo" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Pexpo</div>
+            <div class="tagline">Based in Sonipat, Haryana, Pexpo sells under the Go24 and Perch labels. Its ISI-marked bottles carry up to a 24-month warranty (Bravo at ~₹771) — the cheapest bottle with a credible certification, and a real challenger in the value-insulated tier.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-solara.html">
+          <div class="thumb"><img src="assets/brands/solara/solara-1.jpg" alt="SOLARA" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">SOLARA</div>
+            <div class="tagline">SOLARA, Hyderabad, sells motivational and personalised bottles and tumblers in 18/8 steel, shipping with the most caps and straws in the box. A D2C brand built on customisation and social appeal.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-tupperware.html">
+          <div class="thumb"><img src="assets/brands/tupperware/tupperware-1.png" alt="Tupperware India" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Tupperware India</div>
+            <div class="tagline">Best known globally for plastic food storage, Tupperware is also a long-standing player in reusable and insulated flasks through direct-sales channels. Strong brand trust, with a lighter insulated-steel focus than the top three.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-unifly.html">
+          <div class="thumb"><img src="assets/brand-range.jpg" alt="Unifly Private Limited" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Unifly Private Limited</div>
+            <div class="tagline">Founded in 2020 and based in New Delhi, Unifly makes double-wall stainless-steel water bottles, vacuum flasks and sippers. Part of a group with six manufacturing verticals and a drinkware capacity of 500,000–600,000 units a month. We selected them as our launch maker for consistent quality and real factory capability.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-vaya.html">
+          <div class="thumb"><img src="assets/brands/vaya/vaya-1.png" alt="Vaya" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Vaya</div>
+            <div class="tagline">Vaya is an established mid-premium Indian brand with a wider product range and a gifting focus. Known for clean design and reliable thermal performance across bottles, flasks and lunch solutions.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- ===== Footer ===== -->
-
-<!-- SEO-GEO-FAQ -->
-<section class="faq">
+<section class="sec picks" id="picks">
+  <div class="wrap">
+    <div class="sec-tag" data-en="Editor&#x27;s picks" data-hi="संपादक की पसंद">Editor's picks</div>
+    <h2 data-en="Our top Indian brands right now" data-hi="हमारे शीर्ष भारतीय ब्रांड अभी">Our top Indian brands right now</h2>
+    <p class="sub" data-en="A cross-category shortlist of brands our readers ask about most — market leaders, best-value picks and rising names." data-hi="वे ब्रांड जिनके बारे में पाठक सबसे ज़्यादा पूछते हैं — बाज़ार लीडर, सर्वश्रेष्ठ मूल्य और उभरते नाम।">A cross-category shortlist of brands our readers ask about most — market leaders, best-value picks and rising names.</p>
+    <div class="grid">      <div class="card">
+        <a class="card-link" href="brand-milton.html">
+          <div class="thumb"><img src="assets/brands/milton/milton-1.jpg" alt="Milton" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Milton</div>
+            <div class="tagline">Hamilton Housewares, Mumbai, founded in 1972. Milton&#x27;s Thermosteel is the generic name for insulated bottles in India — sold in 80+ countries with about 16.5% of the organised market (Ken Research). The bottle most Indian homes already own.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-electronics-boat.html">
+          <div class="thumb"><img src="assets/brands/electronics/boat/hero.png" alt="boAt" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">boAt</div>
+            <div class="tagline">India&#x27;s #1 by volume in audio &amp; wearables</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-amul.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/amul/hero.svg" alt="Amul" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Amul</div>
+            <div class="tagline">The taste of India&#x27;s dairy co-operative</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-homeware-hawkins.html">
+          <div class="thumb"><img src="assets/brands/homeware/hawkins/1.jpg" alt="Hawkins" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Hawkins</div>
+            <div class="tagline">The most trusted pressure cooker in India</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-appliances-atomberg.html">
+          <div class="thumb"><img src="assets/brands/appliances/atomberg/hero.svg" alt="Atomberg" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Atomberg</div>
+            <div class="tagline">The BLDC fan disruptor (Make-in-India)</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-cello.html">
+          <div class="thumb"><img src="assets/brands/cello/cello-1.jpg" alt="Cello" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Cello</div>
+            <div class="tagline">Cello World, Mumbai, runs 13 plants, 700+ distributors and 50,000 retail touchpoints across 65+ countries. It dominates the under-₹800 tier with honest pricing and a basic-but-dependable build.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-tupperware.html">
+          <div class="thumb"><img src="assets/brands/tupperware/tupperware-1.png" alt="Tupperware India" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Tupperware India</div>
+            <div class="tagline">Best known globally for plastic food storage, Tupperware is also a long-standing player in reusable and insulated flasks through direct-sales channels. Strong brand trust, with a lighter insulated-steel focus than the top three.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-bedding-sleepcompany.html">
+          <div class="thumb"><img src="assets/brands/bedding/sleepcompany/hero.jpg" alt="The Sleep Company" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">The Sleep Company</div>
+            <div class="tagline">SmartGRID adaptive sleep tech</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-pexpo.html">
+          <div class="thumb"><img src="assets/brands/pexpo/pexpo-1.jpg" alt="Pexpo" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Pexpo</div>
+            <div class="tagline">Based in Sonipat, Haryana, Pexpo sells under the Go24 and Perch labels. Its ISI-marked bottles carry up to a 24-month warranty (Bravo at ~₹771) — the cheapest bottle with a credible certification, and a real challenger in the value-insulated tier.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="brand-borosil.html">
+          <div class="thumb"><img src="assets/brands/borosil/borosil-1.jpg" alt="Borosil" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Borosil</div>
+            <div class="tagline">Mumbai, founded 1962, Borosil grew from borosilicate lab glass into householdware. Its Hydra steel line (₹600–1,500) brings a strong warranty and holds 40–50% of India&#x27;s organised glass-bottle segment.</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-electronics-lava.html">
+          <div class="thumb"><img src="assets/brands/electronics/lava/hero.jpg" alt="Lava" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Lava</div>
+            <div class="tagline">Make-in-India smartphones</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a class="card-link" href="b-packaged-food-haldiram.html">
+          <div class="thumb"><img src="assets/brands/packaged-food/haldiram/hero.png" alt="Haldiram&#x27;s" loading="lazy"/></div>
+          <div class="body">
+            <div class="name">Haldiram&#x27;s</div>
+            <div class="tagline">India&#x27;s snacks &amp; sweets giant</div>
+            <div class="more" data-en="View profile →" data-hi="प्रोफाइल देखें →">View profile →</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2 data-en="Frequently asked" data-hi="अक्सर पूछे जाने वाले प्रश्न">Frequently asked</h2>
+    <section class="faq">
   <div class="wrap">
     <div class="sec-tag" data-en="Questions" data-hi="सवाल">Questions</div>
     <h2 data-en="Frequently asked" data-hi="अक्सर पूछे जाने वाले">Frequently asked</h2>
       <details class="faq-item open">
         <summary data-en="What is India Selection?" data-hi="इंडिया सिलेक्शन क्या है?">What is India Selection?</summary>
-        <div class="ans"><span data-en="India Selection is an editorial curation platform that showcases curated Indian brands and products — starting with insulated stainless-steel drinkware. We research, rank and present trusted Indian makers so global buyers can discover them." data-hi="इंडिया सिलेक्शन एक संपादकीय क्यूरेशन प्लेटफ़ॉर्म है जो भारतीय ब्रांडों और उत्पादों को प्रदर्शित करता है — इन्सुलेटेड स्टेनलेस स्टील पेय पात्र से शुरू करते हुए। हम भरोसेमंद भारतीय निर्माताओं को खोजने में वैश्विक खरीदारों की मदद करते हैं।">India Selection is an editorial curation platform that showcases curated Indian brands and products — starting with insulated stainless-steel drinkware. We research, rank and present trusted Indian makers so global buyers can discover them.</span></div>
+        <div class="ans"><span data-en="India Selection is an editorial curation platform that showcases curated Indian brands and products across appliances, electronics, homeware, bedding, packaged food and drinkware — researched, ranked and presented so global buyers can discover trusted Indian makers." data-hi="इंडिया सिलेक्शन एक संपादकीय क्यूरेशन प्लेटफ़ॉर्म है जो भारतीय ब्रांडों और उत्पादों को प्रदर्शित करता है — शोध, रैंकिंग और प्रस्तुति के साथ, ताकि वैश्विक खरीदार भरोसेमंद भारतीय निर्माताओं को खोज सकें।">India Selection is an editorial curation platform that showcases curated Indian brands and products across appliances, electronics, homeware, bedding, packaged food and drinkware — researched, ranked and presented so global buyers can discover trusted Indian makers.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="How many Indian brands do you cover?" data-hi="आप कितने भारतीय ब्रांड कवर करते हैं?">How many Indian brands do you cover?</summary>
+        <div class="ans"><span data-en="We track 55 Indian brands across six categories: home appliances, consumer electronics, home &amp; kitchenware, bedding, packaged food and drinkware. Every brand has its own review &amp; profile page with real product photos." data-hi="हम छह श्रेणियों में 55 भारतीय ब्रांडों पर नज़र रखते हैं: होम अप्लायंसेज़, कंज़्यूमर इलेक्ट्रॉनिक्स, होम और किचनवेयर, बेडिंग, पैकेज्ड फ़ूड और ड्रिंकवेयर। हर ब्रांड का अपना रिव्यू और प्रोफाइल पेज है।">We track 55 Indian brands across six categories: home appliances, consumer electronics, home &amp; kitchenware, bedding, packaged food and drinkware. Every brand has its own review &amp; profile page with real product photos.</span></div>
       </details>
       <details class="faq-item">
         <summary data-en="Do you sell products directly?" data-hi="क्या आप सीधे उत्पाद बेचते हैं?">Do you sell products directly?</summary>
         <div class="ans"><span data-en="No. India Selection is a discovery and curation site, not a shop. Each brand links to its official store, and sourcing enquiries go to our partner maker, Unifly." data-hi="नहीं। इंडिया सिलेक्शन एक खोज और क्यूरेशन साइट है, शॉप नहीं। हर ब्रांड अपनी आधिकारिक स्टोर से जुड़ा है, और सोर्सिंग पूछताछ हमारे साझेदार निर्माता Unifly को जाती है।">No. India Selection is a discovery and curation site, not a shop. Each brand links to its official store, and sourcing enquiries go to our partner maker, Unifly.</span></div>
       </details>
       <details class="faq-item">
-        <summary data-en="How do you rank brands?" data-hi="आप ब्रांडों की रैंकिंग कैसे करते हैं?">How do you rank brands?</summary>
-        <div class="ans"><span data-en="We rank by market presence, price accessibility, manufacturing capability, certifications (such as BIS/ISI) and D2C momentum. Rankings are editorial and updated periodically — always verify prices and certifications with the maker." data-hi="हम बाज़ार उपस्थिति, कीमत की पहुँच, निर्माण क्षमता, प्रमाणन (जैसे BIS/ISI) और D2C गति के हिसाब से रैंक करते हैं। रैंकिंग संपादकीय हैं और समय-समय पर अपडेट होती हैं — कीमत और प्रमाणन हमेशा निर्माता से पुष्टि करें।">We rank by market presence, price accessibility, manufacturing capability, certifications (such as BIS/ISI) and D2C momentum. Rankings are editorial and updated periodically — always verify prices and certifications with the maker.</span></div>
-      </details>
-      <details class="faq-item">
-        <summary data-en="Which Indian bottle brand is best?" data-hi="भारत का सबसे अच्छा बोतल ब्रांड कौन सा है?">Which Indian bottle brand is best?</summary>
-        <div class="ans"><span data-en="For overall leadership, Milton and Cello dominate; for certified value, Pexpo; for premium BIS-certified and private-label sourcing, HYV; for wholesale/OEM, Nirlon and Unifly. See our Rankings page for the full picture." data-hi="समग्र नेतृत्व के लिए Milton और Cello का वर्चस्व है; प्रमाणित वैल्यू के लिए Pexpo; प्रीमियम BIS-प्रमाणित और प्राइवेट-लेबल सोर्सिंग के लिए HYV; थोक/OEM के लिए Nirlon और Unifly। पूरी तस्वीर के लिए हमारा रैंकिंग पेज देखें।">For overall leadership, Milton and Cello dominate; for certified value, Pexpo; for premium BIS-certified and private-label sourcing, HYV; for wholesale/OEM, Nirlon and Unifly. See our Rankings page for the full picture.</span></div>
+        <summary data-en="Which Indian brand should I choose?" data-hi="मुझे कौन सा भारतीय ब्रांड चुनना चाहिए?">Which Indian brand should I choose?</summary>
+        <div class="ans"><span data-en="It depends on your need — market leader, best value, premium design or wholesale/OEM. Browse by category, or open our Rankings page for best-by-budget and rising-D2C shortlists across every category." data-hi="यह आपकी ज़रूरत पर निर्भर करता है — बाज़ार लीडर, सर्वश्रेष्ठ मूल्य, प्रीमियम डिज़ाइन या थोक/OEM। श्रेणी अनुसार ब्राउज़ करें, या हर श्रेणी के बजट-सर्वश्रेष्ठ और उभरते D2C शॉर्टलिस्ट के लिए हमारा रैंकिंग पेज खोलें।">It depends on your need — market leader, best value, premium design or wholesale/OEM. Browse by category, or open our Rankings page for best-by-budget and rising-D2C shortlists across every category.</span></div>
       </details>
   </div>
 </section>
+  </div>
+</section>
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="logo" style="color:#fff;margin-bottom:14px">
-          <span class="dot">🇮🇳</span>
-          <span>India Selection</span>
-        </div>
-        <p class="about" data-en="Curated Indian brands and products for the world. A selection platform connecting makers with buyers."
-           data-hi="दुनिया के लिए चुनिंदा भारतीय ब्रांड और उत्पाद। निर्माताओं को खरीदारों से जोड़ने वाला एक चयन प्लेटफ़ॉर्म।">Curated Indian brands and products for the world. A selection platform connecting makers with buyers.</p>
-      </div>
-      <div>
-        <h5 data-en="Shop" data-hi="खरीदें">Shop</h5>
-        <a href="cat-appliances.html" data-en="Home Appliances" data-hi="घरेलू उपकरण">Home Appliances</a>
-        <a href="cat-electronics.html" data-en="Consumer Electronics" data-hi="उपभोक्ता इलेक्ट्रॉनिक्स">Consumer Electronics</a>
-        <a href="cat-bedding.html" data-en="Bedding & Mattresses" data-hi="बिस्तर और गद्दे">Bedding &amp; Mattresses</a>
-        <a href="cat-homeware.html" data-en="Home & Kitchenware" data-hi="घर और रसोई का सामान">Home &amp; Kitchenware</a>
-        <a href="cat-packaged-food.html" data-en="Packaged Food" data-hi="पैकेज्ड फूड">Packaged Food</a>
-        <a href="brands.html" data-en="Insulated Drinkware" data-hi="इन्सुलेटेड ड्रिंकवेयर">Insulated Drinkware</a>
-      </div>
-      <div>
-        <h5 data-en="Company" data-hi="कंपनी">Company</h5>
-        <a href="#why" data-en="Why Us" data-hi="हम क्यों">Why Us</a>
-        <a href="#featured" data-en="Our Brands" data-hi="हमारे ब्रांड">Our Brands</a>
-        <a href="brands-directory.html" data-en="All Brands A–Z" data-hi="सभी ब्रांड A–Z">All Brands A–Z</a>
-        <a href="#picks" data-en="Journal" data-hi="जर्नल">Journal</a>
-      </div>
-      <div>
-        <h5 data-en="Contact" data-hi="संपर्क">Contact</h5>
-        <a href="#" data-en="[Your trade company]" data-hi="[आपकी ट्रेड कंपनी]">[Your trade company]</a>
-        <a href="#" data-en="partners@india-selection.com" data-hi="partners@india-selection.com">partners@india-selection.com</a>
-        <a href="#" data-en="List your brand →" data-hi="अपना ब्रांड सूचीबद्ध करें →">List your brand →</a>
-      </div>
+  <div class="foot-inner">
+    <div>
+      <strong>India Selection</strong> · <span data-en="Curated Indian Goods" data-hi="भारत की चुनिंदा वस्तुएँ">Curated Indian Goods</span><br/>
+      <span data-en="A growing, editorial selection of 55 Indian brands across six categories. Verify all prices, MOQ and certifications with makers before ordering." data-hi="छह श्रेणियों में 55 भारतीय ब्रांडों का बढ़ता, संपादकीय चुनाव। ऑर्डर करने से पहले सभी कीमत, MOQ और प्रमाणन निर्माता से पुष्टि करें।">A growing, editorial selection of 55 Indian brands across six categories. Verify all prices, MOQ and certifications with makers before ordering.</span>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 India Selection. <span data-en="All rights reserved." data-hi="सर्वाधिकार सुरक्षित।">All rights reserved.</span></span>
-      <span data-en="Made with care in India & China" data-hi="भारत और चीन में सावधानी से बनाया गया">Made with care in India &amp; China</span>
+    <div>
+      <a href="categories.html" data-en="Browse categories →" data-hi="श्रेणियाँ ब्राउज़ करें →">Browse categories →</a><br/>
+      <a href="rankings.html" data-en="See rankings →" data-hi="रैंकिंग देखें →">See rankings →</a>
     </div>
   </div>
 </footer>
+<script src="cart.js" defer></script>
 
 <script>
-  // ---------- Language toggle (EN <-> HI) ----------
-  (function(){
-    var btn = document.getElementById('langToggle');
-    var stored = localStorage.getItem('is-lang') || 'en';
-    function apply(lang){
-      document.body.classList.toggle('hi', lang === 'hi');
-      document.documentElement.lang = (lang === 'hi' ? 'hi' : 'en');
-      var nodes = document.querySelectorAll('[data-en]');
-      nodes.forEach(function(el){
-        // preserve inner HTML for nodes that contain markup (e.g. <span class="accent">)
-        var en = el.getAttribute('data-en');
-        var hi = el.getAttribute('data-hi');
-        if(en && hi){ el.innerHTML = (lang === 'hi') ? hi : en; }
-      });
-      // placeholder swap for the email input
-      var inp = document.querySelector('.news input[type=email]');
-      if(inp){
-        inp.placeholder = (lang === 'hi') ? inp.getAttribute('data-ph-hi') : inp.getAttribute('data-ph-en');
-      }
-      btn.textContent = (lang === 'hi') ? 'EN' : 'हिंदी';
-      localStorage.setItem('is-lang', lang);
-    }
-    btn.addEventListener('click', function(){
-      var cur = document.body.classList.contains('hi') ? 'hi' : 'en';
-      apply(cur === 'hi' ? 'en' : 'hi');
+(function(){
+  var btn=document.getElementById('langToggle');
+  var stored=localStorage.getItem('is-lang')||'en';
+  function apply(lang){
+    document.body.classList.toggle('hi',lang==='hi');
+    document.documentElement.lang=(lang==='hi'?'hi':'en');
+    var nodes=document.querySelectorAll('[data-en]');
+    nodes.forEach(function(el){
+      var en=el.getAttribute('data-en'),hi=el.getAttribute('data-hi');
+      if(en&&hi){el.innerHTML=(lang==='hi')?hi:en;}
     });
-    apply(stored);
-  })();
-
-  // ---------- Mobile menu ----------
-  (function(){
-    var burger = document.getElementById('burger');
-    var links = document.getElementById('navLinks');
-    burger.addEventListener('click', function(){ links.classList.toggle('open'); });
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){ links.classList.remove('open'); });
-    });
-  })();
+    btn.textContent=(lang==='hi')?'EN':'हिंदी';
+    localStorage.setItem('is-lang',lang);
+  }
+  btn.addEventListener('click',function(){
+    var cur=document.body.classList.contains('hi')?'hi':'en';
+    apply(cur==='hi'?'en':'hi');
+  });
+  apply(stored);
+})();
+(function(){
+  var b=document.getElementById('burger'),l=document.getElementById('navLinks');
+  b.addEventListener('click',function(){l.classList.toggle('open');});
+  l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');});});
+})();
 </script>
-<script src="cart.js" defer></script>
+
 </body>
 </html>
