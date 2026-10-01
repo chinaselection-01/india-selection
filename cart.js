@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var SITE_BASE = "https://www.india-selection.com/";
+  var SITE_BASE = "https://india-selection.com/";
   var CART_EMAIL = "bob@india-selection.com";
   var KEY = "is-cart";
 
