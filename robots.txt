@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.india-selection.com/sitemap.xml
+
+# AI crawlers / generative engines: see https://www.india-selection.com/llms.txt

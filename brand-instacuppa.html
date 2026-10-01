@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>InstaCuppa — India Selection Brand Library</title>
+<meta name="description" content="InstaCuppa on India Selection: story, facts, real product photos and rankings."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --saffron:#F4722B; --saffron-dark:#D85A18;
+  --green:#0F7A4D; --green-dark:#0B5E3B;
+  --marigold:#F4B400; --cream:#FBF6EF; --cream-2:#F3E9DA;
+  --ink:#2B2118; --ink-soft:#6B5E4F; --white:#FFFFFF;
+  --line:#E7D9C4; --shadow:0 10px 30px rgba(43,33,24,.10);
+  --shadow-sm:0 4px 14px rgba(43,33,24,.08);
+  --radius:18px; --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Poppins","Noto Sans Devanagari",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+[lang="hi"] body,body.hi{font-family:"Noto Sans Devanagari","Poppins",sans-serif}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(251,246,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;gap:18px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px}
+.logo .dot{font-size:22px}
+.logo small{display:block;font-weight:500;font-size:11px;color:var(--ink-soft);letter-spacing:.3px}
+.links{margin-left:auto;display:flex;gap:22px;align-items:center}
+.links a{font-weight:600;font-size:14.5px;color:var(--ink-soft);transition:.2s}
+.links a:hover,.links a.active{color:var(--saffron-dark)}
+.lang-btn{margin-left:6px;border:1.5px solid var(--saffron);background:#fff;color:var(--saffron-dark);
+  font-weight:700;font-size:13px;padding:7px 14px;border-radius:30px;cursor:pointer;font-family:inherit}
+.burger{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--ink);margin-left:auto}
+
+/* hero */
+.hero{background:linear-gradient(135deg,#FFF3E3,#FDE7CC);padding:54px 0 42px;border-bottom:1px solid var(--line)}
+.hero .badge{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;
+  font-size:12.5px;font-weight:700;padding:6px 14px;border-radius:30px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,4.4vw,46px);line-height:1.12;font-weight:800;max-width:820px}
+.hero h1 .accent{color:var(--saffron-dark)}
+.hero p.lead{margin-top:14px;max-width:700px;color:var(--ink-soft);font-size:16px}
+
+/* section */
+.sec{padding:42px 0}
+.sec-tag{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+  color:var(--saffron-dark);background:#FDEAD9;padding:5px 12px;border-radius:20px;margin-bottom:12px}
+.sec h2{font-size:28px;font-weight:800;margin-bottom:6px}
+.sec .sub{color:var(--ink-soft);max-width:740px;margin-bottom:24px;font-size:15px}
+
+/* brand grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:.2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .thumb{height:200px;background:var(--cream-2);display:grid;place-items:center;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:contain;padding:14px;box-sizing:border-box}
+.card.featured .thumb{background:linear-gradient(135deg,#FFF3E8,#FBE3CB)}
+.card .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card .name{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700}
+.card .name .star{background:var(--green);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px}
+.card .tagline{color:var(--ink-soft);font-size:14px;min-height:40px}
+.card .badges{display:flex;flex-wrap:wrap;gap:7px}
+.bdg{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--cream);border:1px solid var(--line);color:var(--ink-soft)}
+.bdg.l1{background:#FDEAD9;color:var(--saffron-dark);border-color:#F3C99E}
+.bdg.l2{background:#E5F1EA;color:var(--green-dark);border-color:#BFE0CC}
+.bdg.l3{background:#EFE7DA;color:#8a6a2f;border-color:#E2D2B6}
+.bdg.l4{background:#EAE6F7;color:#5b3fb0;border-color:#CFC3EE}
+.card .more{margin-top:auto;font-weight:600;font-size:14.5px;color:var(--saffron-dark)}
+
+/* detail page */
+.back{display:inline-block;margin:18px 0 0 22px;font-weight:600;color:var(--saffron-dark)}
+.detail-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:center;
+  background:linear-gradient(135deg,#FFF7EC,#FBF6EF);padding:46px 0;border-bottom:1px solid var(--line)}
+.detail-hero .logowrap{display:grid;place-items:center}
+.detail-hero .logowrap img{max-width:220px}
+.detail-hero h1{font-size:clamp(30px,4vw,46px);font-weight:800;line-height:1.1}
+.detail-hero .tag{margin:14px 0 18px;font-size:17px;color:var(--ink-soft)}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:6px 0 20px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.fact .k{font-size:12px;font-weight:700;color:var(--saffron-dark);text-transform:uppercase;letter-spacing:.4px}
+.fact .v{font-size:15px;font-weight:600;margin-top:2px}
+.detail-hero .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;
+  border-radius:999px;cursor:pointer;border:none;transition:.2s;font-family:inherit}
+.btn-primary{background:var(--saffron);color:#fff;box-shadow:0 8px 20px rgba(244,114,43,.3)}
+.btn-primary:hover{background:var(--saffron-dark)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--green)}
+
+.story{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story p{font-size:16px;color:var(--ink);max-width:820px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gitem{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;place-items:center;aspect-ratio:1/1}
+.gitem img{width:100%;height:100%;object-fit:contain;padding:16px;box-sizing:border-box}
+
+.rank-block{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.rank-pill{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:12px 16px;box-shadow:var(--shadow-sm)}
+.rank-pill .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:800;color:#fff;
+  background:var(--saffron)}
+.rank-pill .t{font-weight:600}
+
+.cta-band{background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;border-radius:var(--radius);
+  padding:30px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:8px 0 0}
+.cta-band h3{font-size:22px;margin-bottom:6px}
+.cta-band p{opacity:.92;font-size:14.5px;max-width:560px}
+.cta-band .btn{background:#fff;color:var(--green-dark);font-weight:700;white-space:nowrap}
+
+/* faq (SEO/GEO) */
+.faq{padding:42px 0;background:#fff;border-top:1px solid var(--line)}
+.faq h2{font-size:28px;font-weight:800;margin-bottom:18px}
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:var(--cream);overflow:hidden}
+.faq-item summary{padding:16px 20px;font-weight:600;font-size:15.5px;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--saffron-dark);font-weight:800;font-size:22px;line-height:1}
+.faq-item[open] summary::after{content:"-"}
+.faq-item .ans{padding:0 20px 18px;color:var(--ink-soft);font-size:15px;max-width:880px}
+
+footer{background:#221A12;color:#E9DFD2;padding:34px 0;margin-top:40px}
+.foot-inner{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px}
+.foot-inner a{color:#F4B400}
+
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .detail-hero{grid-template-columns:1fr;gap:24px}
+  .links{position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;gap:0;
+    border-bottom:1px solid var(--line);padding:0;max-height:0;overflow:hidden;transition:.25s}
+  .links.open{max-height:360px}
+  .links a{padding:13px 22px;border-top:1px solid var(--line);width:100%}
+  .burger{display:block}
+}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="cart.css"/>
+<!-- SEO-GEO-HEAD -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="manifest" href="site.webmanifest"/>
+<link rel="canonical" href="./brand-instacuppa.html"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="India Selection"/>
+<meta property="og:title" content="InstaCuppa — India Selection Brand Library"/>
+<meta property="og:description" content="InstaCuppa on India Selection: story, facts, real product photos and rankings."/>
+<meta property="og:url" content="./brand-instacuppa.html"/>
+<meta property="og:image" content="./assets/brands/instacuppa/instacuppa-1.jpg"/>
+<meta property="og:locale" content="en_IN"/>
+<meta property="og:locale:alternate" content="hi_IN"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="InstaCuppa — India Selection Brand Library"/>
+<meta name="twitter:description" content="InstaCuppa on India Selection: story, facts, real product photos and rankings."/>
+<meta name="twitter:image" content="./assets/brands/instacuppa/instacuppa-1.jpg"/>
+<link rel="alternate" hreflang="x-default" href="./brand-instacuppa.html"/>
+<!-- SEO-GEO-JSONLD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "./#organization",
+      "name": "India Selection",
+      "url": "./",
+      "logo": "./favicon.svg",
+      "description": "India Selection is an editorial curation platform showcasing curated Indian brands and products, beginning with insulated stainless-steel drinkware for global buyers."
+    },
+    {
+      "@type": "Brand",
+      "name": "InstaCuppa",
+      "description": "InstaCuppa, Tirupati, since 2016, makes a one-hand sports sipper (400g body) with a 10-day trial. At similar price points it offers wider mouths than the legacy brands — a practical D2C pick for gym and travel.",
+      "url": "https://www.instacuppa.com/",
+      "sameAs": [
+        "https://www.instacuppa.com/"
+      ],
+      "brandOrigin": "India"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "./"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Brands",
+          "item": "./brands.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "InstaCuppa",
+          "item": "./brand-instacuppa.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is InstaCuppa a good brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We feature InstaCuppa for: one-hand sports sipper, wider mouths. It is part of our curated Indian drinkware selection, chosen for real manufacturing capability and market relevance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is InstaCuppa based and since when?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "InstaCuppa is based in Tirupati, since 2016. See the brand profile for the full story and product gallery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is InstaCuppa's price range?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typical InstaCuppa pricing is around ₹799–1,499. Prices vary by model, capacity and retailer — confirm with the maker."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does India Selection sell InstaCuppa products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. India Selection is a curation and discovery site, not a shop. Buy InstaCuppa from its official site (linked above), or contact our partner maker Unifly for wholesale steel drinkware."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo">
+      <span class="dot">🇮🇳</span>
+      <span>India Selection<small data-en="Curated Indian Goods" data-hi="भारत की चुनिंदा वस्तुएँ">Curated Indian Goods</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+  <a href="index.html" data-en="Home" data-hi="होम">Home</a>
+  <a href="brands.html" class="active" data-en="Brands" data-hi="ब्रांड">Brands</a>
+  <a href="rankings.html" data-en="Rankings" data-hi="रैंकिंग">Rankings</a>
+  <a href="index.html#contact" data-en="Contact" data-hi="संपर्क">Contact</a>
+</nav>
+    <button class="lang-btn" id="langToggle">हिंदी</button>
+    <button class="burger" id="burger" aria-label="menu">☰</button>
+  </div>
+</header>
+<a class="wrap back" href="brands.html" data-en="← All brands" data-hi="← सभी ब्रांड">← All brands</a>
+<section class="detail-hero">
+  <div class="wrap" style="display:grid;grid-template-columns:inherit;gap:36px;align-items:center">
+    <div class="logowrap"><img src="assets/brands/instacuppa/instacuppa-1.jpg" alt="InstaCuppa"/></div>
+    <div>
+      <div class="sec-tag" data-en="Brand profile" data-hi="ब्रांड प्रोफाइल">Brand profile</div>
+      <h1>InstaCuppa</h1>
+      <div class="tag" data-en="One-hand sports sipper, wider mouths" data-hi="वन-हैंड स्पोर्ट्स सिपर, चौड़े मुँह">One-hand sports sipper, wider mouths</div>
+      <div class="facts">        <div class="fact"><div class="k">HQ</div><div class="v">Tirupati</div></div>
+        <div class="fact"><div class="k">Since</div><div class="v">2016</div></div>
+        <div class="fact"><div class="k">Trial</div><div class="v">10-day</div></div>
+        <div class="fact"><div class="k">Price</div><div class="v">₹799–1,499</div></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.instacuppa.com/" target="_blank" rel="noopener" data-en="Visit official site →" data-hi="आधिकारिक साइट देखें →">Visit official site →</a>
+        <a class="btn btn-ghost" href="rankings.html" data-en="See rankings →" data-hi="रैंकिंग देखें →">See rankings →</a>
+        <button class="add-cart-detail" type="button" data-add-to-cart data-id="drinkware:instacuppa" data-name="InstaCuppa" data-cat="Drinkware" data-href="brand-instacuppa.html" data-en="Add to list" data-hi="सूची में डालें"><span class="ico">＋</span><span data-en="Add to list" data-hi="सूची में डालें">Add to list</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="story">
+  <div class="wrap">
+    <div class="sec-tag" data-en="Their story" data-hi="उनकी कहानी">Their story</div>
+    <h2 data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</h2>
+    <p data-en="InstaCuppa, Tirupati, since 2016, makes a one-hand sports sipper (400g body) with a 10-day trial. At similar price points it offers wider mouths than the legacy brands — a practical D2C pick for gym and travel." data-hi="InstaCuppa, तिरुपति, 2016 से, वन-हैंड स्पोर्ट्स सिपर (400g बॉडी) 10-दिन ट्रायल के साथ बनाता है। समान कीमत पर यह पुराने ब्रांडों से चौड़े मुँह देता है — जिम और यात्रा के लिए व्यावहारिक D2C पिक।">InstaCuppa, Tirupati, since 2016, makes a one-hand sports sipper (400g body) with a 10-day trial. At similar price points it offers wider mouths than the legacy brands — a practical D2C pick for gym and travel.</p>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-tag" data-en="Product gallery" data-hi="उत्पाद गैलरी">Product gallery</div>
+    <h2 data-en="Real products" data-hi="असली उत्पाद">Real products</h2>
+    <p class="sub" data-en="Product photos sourced from the brand&#x27;s own store and major Indian marketplaces. Prices and availability change — confirm with the maker." data-hi="उत्पाद फ़ोटो ब्रांड की अपनी स्टोर और प्रमुख भारतीय मार्केटप्लेस से लिए गए। कीमतें और उपलब्धता बदलती हैं — निर्माता से पुष्टि करें।">Product photos sourced from the brand's own store and major Indian marketplaces. Prices and availability change — confirm with the maker.</p>
+    <div class="gallery">      <div class="gitem"><img src="assets/brands/instacuppa/instacuppa-1.jpg" alt="InstaCuppa product" loading="lazy"/></div>
+      <div class="gitem"><img src="assets/brands/instacuppa/instacuppa-2.jpg" alt="InstaCuppa product" loading="lazy"/></div>
+      <div class="gitem"><img src="assets/brands/instacuppa/instacuppa-3.jpg" alt="InstaCuppa product" loading="lazy"/></div>
+      <div class="gitem"><img src="assets/brands/instacuppa/instacuppa-4.jpg" alt="InstaCuppa product" loading="lazy"/></div>
+      <div class="gitem"><img src="assets/brands/instacuppa/instacuppa-5.jpg" alt="InstaCuppa product" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-tag" data-en="Source" data-hi="सोर्स">Source</div>
+    <h2 data-en="Top 10 InstaCuppa products to source" data-hi="InstaCuppa के सोर्स करने के शीर्ष 10 उत्पाद">Top 10 InstaCuppa products to source</h2>
+    <p class="sub" data-en="Add any specific product to your procurement list — set quantity and notes before you submit." data-hi="कोई भी विशिष्ट उत्पाद अपनी सोर्सिंग सूची में जोड़ें — भेजने से पहले मात्रा व नोट्स दें।">Add any specific product to your procurement list — set quantity and notes before you submit.</p>
+    <div class="pgrid">
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/products/drinkware/instacuppa/0.jpg" alt="InstaCuppa Borosilicate Glass Bottle 1000ml" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Borosilicate Glass Bottle 1000ml" data-hi="InstaCuppa Borosilicate Glass Bottle 1000ml">InstaCuppa Borosilicate Glass Bottle 1000ml</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:0" data-name="InstaCuppa Borosilicate Glass Bottle 1000ml" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Borosilicate Glass Bottle 1000ml to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/products/drinkware/instacuppa/1.jpg" alt="InstaCuppa Borosilicate Glass Bottle 500ml" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Borosilicate Glass Bottle 500ml" data-hi="InstaCuppa Borosilicate Glass Bottle 500ml">InstaCuppa Borosilicate Glass Bottle 500ml</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:1" data-name="InstaCuppa Borosilicate Glass Bottle 500ml" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Borosilicate Glass Bottle 500ml to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/products/drinkware/instacuppa/2.jpg" alt="InstaCuppa Glass Bottle with Sports Sipper Lid" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Glass Bottle with Sports Sipper Lid" data-hi="InstaCuppa Glass Bottle with Sports Sipper Lid">InstaCuppa Glass Bottle with Sports Sipper Lid</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:2" data-name="InstaCuppa Glass Bottle with Sports Sipper Lid" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Glass Bottle with Sports Sipper Lid to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/products/drinkware/instacuppa/3.jpg" alt="InstaCuppa Glass Bottle with Steel Infuser" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Glass Bottle with Steel Infuser" data-hi="InstaCuppa Glass Bottle with Steel Infuser">InstaCuppa Glass Bottle with Steel Infuser</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:3" data-name="InstaCuppa Glass Bottle with Steel Infuser" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Glass Bottle with Steel Infuser to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/products/drinkware/instacuppa/4.jpg" alt="InstaCuppa Borosilicate Glass Tumbler with Bamboo Lid" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Borosilicate Glass Tumbler with Bamboo Lid" data-hi="InstaCuppa Borosilicate Glass Tumbler with Bamboo Lid">InstaCuppa Borosilicate Glass Tumbler with Bamboo Lid</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:4" data-name="InstaCuppa Borosilicate Glass Tumbler with Bamboo Lid" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Borosilicate Glass Tumbler with Bamboo Lid to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/products/drinkware/instacuppa/5.jpg" alt="InstaCuppa Glass Water Bottle with Time Markings" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Glass Water Bottle with Time Markings" data-hi="InstaCuppa Glass Water Bottle with Time Markings">InstaCuppa Glass Water Bottle with Time Markings</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:5" data-name="InstaCuppa Glass Water Bottle with Time Markings" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Glass Water Bottle with Time Markings to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/brands/instacuppa/instacuppa-1.jpg" alt="InstaCuppa" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Glass Bottle with Neoprene Sleeve" data-hi="InstaCuppa Glass Bottle with Neoprene Sleeve">InstaCuppa Glass Bottle with Neoprene Sleeve</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:6" data-name="InstaCuppa Glass Bottle with Neoprene Sleeve" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Glass Bottle with Neoprene Sleeve to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/brands/instacuppa/instacuppa-1.jpg" alt="InstaCuppa" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa Glass Tumbler with 2 Straws" data-hi="InstaCuppa Glass Tumbler with 2 Straws">InstaCuppa Glass Tumbler with 2 Straws</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:7" data-name="InstaCuppa Glass Tumbler with 2 Straws" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa Glass Tumbler with 2 Straws to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/brands/instacuppa/instacuppa-1.jpg" alt="InstaCuppa" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa 1000ml Glass Bottle Green" data-hi="InstaCuppa 1000ml Glass Bottle Green">InstaCuppa 1000ml Glass Bottle Green</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:8" data-name="InstaCuppa 1000ml Glass Bottle Green" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa 1000ml Glass Bottle Green to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pthumb"><img src="assets/brands/instacuppa/instacuppa-1.jpg" alt="InstaCuppa" loading="lazy"/></div>
+        <div class="pbody">
+          <div class="pname" data-en="InstaCuppa 1000ml Glass Bottle Grey" data-hi="InstaCuppa 1000ml Glass Bottle Grey">InstaCuppa 1000ml Glass Bottle Grey</div>
+          <div class="pbrand" data-en="InstaCuppa" data-hi="InstaCuppa">InstaCuppa</div>
+          <button class="add-cart" type="button" data-add-to-cart data-id="drinkware:instacuppa:9" data-name="InstaCuppa 1000ml Glass Bottle Grey" data-cat="Drinkware" data-href="brand-instacuppa.html" data-brand="InstaCuppa" data-en="Add to cart" data-hi="कार्ट में डालें" aria-label="Add InstaCuppa 1000ml Glass Bottle Grey to list"><span class="ico">＋</span><span class="lbl" data-en="Add" data-hi="जोड़ें">Add</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-tag" data-en="On our rankings" data-hi="हमारी रैंकिंग में">On our rankings</div>
+    <h2 data-en="Where we placed them" data-hi="हमने इन्हें कहाँ रखा">Where we placed them</h2>
+    <div class="rank-block">      <div class="rank-pill"><span class="n">1</span><span class="t">Rising D2C</span></div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h3 data-en="Sourcing this category?" data-hi="यह श्रेणी सोर्स कर रहे हैं?">Sourcing this category?</h3>
+        <p data-en="Talk to our partner maker Unifly for ex-works steel drinkware, or list your own brand on India Selection." data-hi="Ex-works स्टील पेय पात्र के लिए हमारे साझेदार निर्माता Unifly से बात करें, या इंडिया सिलेक्शन पर अपना ब्रांड सूचीबद्ध करें।">Talk to our partner maker Unifly for ex-works steel drinkware, or list your own brand on India Selection.</p>
+      </div>
+      <a class="btn" href="https://www.uniflysteelbottle.com/" target="_blank" rel="noopener" data-en="Source from Unifly →" data-hi="Unifly से सोर्स करें →">Source from Unifly →</a>
+    </div>
+  </div>
+</section>
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-tag" data-en="Questions" data-hi="सवाल">Questions</div>
+    <h2 data-en="Frequently asked" data-hi="अक्सर पूछे जाने वाले">Frequently asked</h2>
+      <details class="faq-item open">
+        <summary data-en="Is InstaCuppa a good brand?" data-hi="क्या InstaCuppa अच्छा ब्रांड है?">Is InstaCuppa a good brand?</summary>
+        <div class="ans"><span data-en="We feature InstaCuppa for: one-hand sports sipper, wider mouths. It is part of our curated Indian drinkware selection, chosen for real manufacturing capability and market relevance." data-hi="हम InstaCuppa को इसलिए शामिल करते हैं: वन-हैंड स्पोर्ट्स सिपर, चौड़े मुँह। यह हमारे चुनिंदा भारतीय पेय-पात्र चयन का हिस्सा है, जिसे असली निर्माण क्षमता और बाज़ार प्रासंगिकता के लिए चुना गया है।">We feature InstaCuppa for: one-hand sports sipper, wider mouths. It is part of our curated Indian drinkware selection, chosen for real manufacturing capability and market relevance.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="Where is InstaCuppa based and since when?" data-hi="InstaCuppa कहाँ स्थित है और कब से?">Where is InstaCuppa based and since when?</summary>
+        <div class="ans"><span data-en="InstaCuppa is based in Tirupati, since 2016. See the brand profile for the full story and product gallery." data-hi="InstaCuppa Tirupati, since 2016. पूरी कहानी और उत्पाद गैलरी के लिए ब्रांड प्रोफाइल देखें।">InstaCuppa is based in Tirupati, since 2016. See the brand profile for the full story and product gallery.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="What is InstaCuppa&#x27;s price range?" data-hi="InstaCuppa की कीमत श्रेणी क्या है?">What is InstaCuppa&#x27;s price range?</summary>
+        <div class="ans"><span data-en="Typical InstaCuppa pricing is around ₹799–1,499. Prices vary by model, capacity and retailer — confirm with the maker." data-hi="InstaCuppa की विशिष्ट कीमत लगभग ₹799–1,499 है। मॉडल, क्षमता और रिटेलर के हिसाब से बदलती है — निर्माता से पुष्टि करें।">Typical InstaCuppa pricing is around ₹799–1,499. Prices vary by model, capacity and retailer — confirm with the maker.</span></div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="Does India Selection sell InstaCuppa products?" data-hi="क्या इंडिया सिलेक्शन InstaCuppa उत्पाद बेचता है?">Does India Selection sell InstaCuppa products?</summary>
+        <div class="ans"><span data-en="No. India Selection is a curation and discovery site, not a shop. Buy InstaCuppa from its official site (linked above), or contact our partner maker Unifly for wholesale steel drinkware." data-hi="नहीं। इंडिया सिलेक्शन एक क्यूरेशन और खोज साइट है, शॉप नहीं। InstaCuppa इसकी आधिकारिक साइट (ऊपर लिंक) से खरीदें, या थोक स्टील पेय पात्र के लिए हमारे साझेदार निर्माता Unifly से संपर्क करें।">No. India Selection is a curation and discovery site, not a shop. Buy InstaCuppa from its official site (linked above), or contact our partner maker Unifly for wholesale steel drinkware.</span></div>
+      </details>
+  </div>
+</section>
+<footer>
+  <div class="foot-inner">
+    <div>
+      <strong>India Selection</strong> · <span data-en="Curated Indian Goods" data-hi="भारत की चुनिंदा वस्तुएँ">Curated Indian Goods</span><br/>
+      <span data-en="A growing, editorial selection of Indian brands. Verify all prices, MOQ and certifications with makers before ordering." data-hi="भारतीय ब्रांडों का बढ़ता, संपादकीय चुनाव। ऑर्डर करने से पहले सभी कीमत, MOQ और प्रमाणन निर्माता से पुष्टि करें।">A growing, editorial selection of Indian brands. Verify all prices, MOQ and certifications with makers before ordering.</span>
+    </div>
+    <div>
+      <a href="index.html" data-en="← Back to selection" data-hi="← चुनाव पर वापस">← Back to selection</a><br/>
+      <a href="index.html#contact" data-en="List your brand →" data-hi="अपना ब्रांड सूचीबद्ध करें →">List your brand →</a>
+    </div>
+  </div>
+</footer>
+<script src="cart.js" defer></script>
+
+<script>
+(function(){
+  var btn=document.getElementById('langToggle');
+  var stored=localStorage.getItem('is-lang')||'en';
+  function apply(lang){
+    document.body.classList.toggle('hi',lang==='hi');
+    document.documentElement.lang=(lang==='hi'?'hi':'en');
+    var nodes=document.querySelectorAll('[data-en]');
+    nodes.forEach(function(el){
+      var en=el.getAttribute('data-en'),hi=el.getAttribute('data-hi');
+      if(en&&hi){el.innerHTML=(lang==='hi')?hi:en;}
+    });
+    btn.textContent=(lang==='hi')?'EN':'हिंदी';
+    localStorage.setItem('is-lang',lang);
+  }
+  btn.addEventListener('click',function(){
+    var cur=document.body.classList.contains('hi')?'hi':'en';
+    apply(cur==='hi'?'en':'hi');
+  });
+  apply(stored);
+})();
+(function(){
+  var b=document.getElementById('burger'),l=document.getElementById('navLinks');
+  b.addEventListener('click',function(){l.classList.toggle('open');});
+  l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');});});
+})();
+</script>
+
+</body>
+</html>

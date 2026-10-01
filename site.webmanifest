@@ -1,0 +1,14 @@
+{
+  "name": "India Selection — Curated Indian Goods",
+  "short_name": "India Selection",
+  "description": "Curated Indian brands and products, starting with insulated stainless-steel drinkware.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FBF6EF",
+  "theme_color": "#F4722B",
+  "lang": "en-IN",
+  "icons": [
+    {"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}
+  ]
+}

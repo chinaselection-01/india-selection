@@ -1,0 +1,78 @@
+# India Selection
+
+> Editorial curation platform of Indian consumer-goods brands — home appliances, consumer electronics/3C, bedding & mattresses, home & kitchenware, packaged food and insulated drinkware — with rankings, brand profiles, key facts and sourcing notes for global buyers.
+
+## Categories
+
+- [All categories](https://www.india-selection.com/categories.html): hub of every category we track
+- [Home Appliances](https://www.india-selection.com/cat-appliances.html): Mixers, fans, washing machines and the kitchen-electrical names Indian homes trust. (6 brands, 3 rankings)
+- [Consumer Electronics / 3C](https://www.india-selection.com/cat-electronics.html): TWS earbuds, smartwatches and budget smartphones — where Indian D2C brands now lead. (6 brands, 3 rankings)
+- [Bedding & Mattresses](https://www.india-selection.com/cat-bedding.html): Mattresses and bedsheets — from legacy coir names to D2C sleep-tech brands. (6 brands, 2 rankings)
+- [Home & Kitchenware](https://www.india-selection.com/cat-homeware.html): Pressure cookers, cookware and storage — the everyday Indian kitchen names. (6 brands, 3 rankings)
+- [Packaged Food](https://www.india-selection.com/cat-packaged-food.html): Chocolates, instant noodles, candy, biscuits, snacks and tea — the Indian packaged-food brands households reach for. (20 brands, 6 rankings)
+- [Insulated drinkware](https://www.india-selection.com/brands.html): our original library of drinkware brands
+
+## All brand profiles
+
+- [Brand directory A–Z](https://www.india-selection.com/brands-directory.html): links to every brand profile
+- [Bajaj Electricals](https://www.india-selection.com/b-appliances-bajaj.html): The household name in Indian kitchens (Home Appliances) — official site: https://www.bajajelectricals.com/
+- [Havells](https://www.india-selection.com/b-appliances-havells.html): Premium design meets energy efficiency (Home Appliances) — official site: https://www.havells.com/
+- [Crompton](https://www.india-selection.com/b-appliances-crompton.html): The ceiling-fan category leader (Home Appliances) — official site: https://www.crompton.co.in/
+- [IFB](https://www.india-selection.com/b-appliances-ifb.html): Front-load & hard-water specialist (Home Appliances) — official site: https://www.ifbappliances.com/
+- [Voltas](https://www.india-selection.com/b-appliances-voltas.html): The Tata-group cooling & appliances name (Home Appliances) — official site: https://www.voltas.com/
+- [Atomberg](https://www.india-selection.com/b-appliances-atomberg.html): The BLDC fan disruptor (Make-in-India) (Home Appliances) — official site: https://atomberg.com/
+- [boAt](https://www.india-selection.com/b-electronics-boat.html): India's #1 by volume in audio & wearables (Consumer Electronics / 3C) — official site: https://www.boat-lifestyle.com/
+- [Noise](https://www.india-selection.com/b-electronics-noise.html): India's largest smartwatch brand (Consumer Electronics / 3C) — official site: https://www.noise.in/
+- [Fire-Boltt](https://www.india-selection.com/b-electronics-fireboltt.html): The budget-smartwatch disruptor (Consumer Electronics / 3C) — official site: https://www.fireboltt.com/
+- [Lava](https://www.india-selection.com/b-electronics-lava.html): Make-in-India smartphones (Consumer Electronics / 3C) — official site: https://www.lavamobiles.com/
+- [Micromax](https://www.india-selection.com/b-electronics-micromax.html): The Indian comeback brand (Consumer Electronics / 3C) — official site: https://www.micromaxinfo.com/
+- [pTron](https://www.india-selection.com/b-electronics-ptrON.html): Budget audio & accessories, Made-in-India (Consumer Electronics / 3C) — official site: https://ptronshop.com/
+- [Sleepwell](https://www.india-selection.com/b-bedding-sleepwell.html): Legacy trust, largest offline network (Bedding & Mattresses) — official site: https://www.sleepwell.com/
+- [Kurlon](https://www.india-selection.com/b-bedding-kurlon.html): Coir + foam firm-support specialist (Bedding & Mattresses) — official site: https://www.kurlon.com/
+- [Wakefit](https://www.india-selection.com/b-bedding-wakefit.html): D2C value with a 100-night trial (Bedding & Mattresses) — official site: https://www.wakefit.co/
+- [The Sleep Company](https://www.india-selection.com/b-bedding-sleepcompany.html): SmartGRID adaptive sleep tech (Bedding & Mattresses) — official site: https://thesleepcompany.in/
+- [Spaces](https://www.india-selection.com/b-bedding-spaces.html): Premium cotton home textiles (Welspun) (Bedding & Mattresses) — official site: https://www.spaces.in/
+- [Bombay Dyeing](https://www.india-selection.com/b-bedding-bombaydyeing.html): 140 years of Indian textile trust (Bedding & Mattresses) — official site: https://www.bombaydyeing.com/
+- [Hawkins](https://www.india-selection.com/b-homeware-hawkins.html): The most trusted pressure cooker in India (Home & Kitchenware) — official site: https://www.hawkinscookers.com/
+- [Pigeon](https://www.india-selection.com/b-homeware-pigeon.html): Honest value, the budget default (Home & Kitchenware) — official site: https://www.pigeon.in/
+- [Signoraware](https://www.india-selection.com/b-homeware-signoraware.html): The plastic storage-container specialist (Home & Kitchenware) — official site: https://www.signoraware.com/
+- [Nayasa](https://www.india-selection.com/b-homeware-nayasa.html): Modern plastic homeware & storage (Home & Kitchenware) — official site: https://www.nayasa.com/
+- [Bergner](https://www.india-selection.com/b-homeware-bergner.html): European premium steel cookware (Home & Kitchenware) — official site: https://bergner.in/
+- [Vinod Cookware](https://www.india-selection.com/b-homeware-vinod.html): Trusted Indian stainless-steel since 1962 (Home & Kitchenware) — official site: https://vinodsteel.com/
+- [Cadbury (Mondelez India)](https://www.india-selection.com/b-packaged-food-cadbury.html): India's favourite chocolate & confectionery (Packaged Food) — official site: https://www.cadbury.co.in/
+- [Amul](https://www.india-selection.com/b-packaged-food-amul.html): The taste of India's dairy co-operative (Packaged Food) — official site: https://www.amul.com/
+- [Nestlé India](https://www.india-selection.com/b-packaged-food-nestle.html): KitKat, Munch & more — everywhere (Packaged Food) — official site: https://www.nestle.in/
+- [Maggi (Nestlé)](https://www.india-selection.com/b-packaged-food-maggi.html): India's instant-noodle icon (Packaged Food) — official site: https://www.maggi.in/
+- [Parle Products](https://www.india-selection.com/b-packaged-food-parle.html): The brand behind Parle-G & more (Packaged Food) — official site: https://www.parleproducts.com/
+- [ITC (Sunfeast, Yippee!, Bingo!)](https://www.india-selection.com/b-packaged-food-itc.html): Food & lifestyle conglomerate (Packaged Food) — official site: https://www.itcportal.com/
+- [Perfetti Van Melle](https://www.india-selection.com/b-packaged-food-perfetti.html): Alpenliebe, Mentos & Big Babol (Packaged Food) — official site: https://www.perfettivanmelle.com/
+- [DS Group (Pulse)](https://www.india-selection.com/b-packaged-food-ds.html): Home of the Pulse candy craze (Packaged Food) — official site: https://www.thedsgroup.in/
+- [Lotte India](https://www.india-selection.com/b-packaged-food-lotte.html): Choco Pie & confectionery (Packaged Food) — official site: https://www.lotteindia.com/
+- [Britannia Industries](https://www.india-selection.com/b-packaged-food-britannia.html): Good Day, Tiger & Marie (Packaged Food) — official site: https://www.britannia.co.in/
+- [Priya Gold](https://www.india-selection.com/b-packaged-food-priyagold.html): Value biscuits, pan-India (Packaged Food) — official site: https://www.priyagold.com/
+- [Haldiram's](https://www.india-selection.com/b-packaged-food-haldiram.html): India's snacks & sweets giant (Packaged Food) — official site: https://www.haldirams.com/
+- [Lay's (PepsiCo India)](https://www.india-selection.com/b-packaged-food-lays.html): India's #1 potato chips (Packaged Food) — official site: https://www.lays.com/
+- [Balaji Wafers](https://www.india-selection.com/b-packaged-food-balaji.html): Gujarat's wafers & chips king (Packaged Food) — official site: https://balajiwafers.com/
+- [Bikanervala](https://www.india-selection.com/b-packaged-food-bikanervala.html): Bhujia, namkeen & sweets (Packaged Food) — official site: https://www.bikanervala.com/
+- [Tata Tea (Tata Consumer)](https://www.india-selection.com/b-packaged-food-tatatea.html): India's largest tea company (Packaged Food) — official site: https://www.tataconsumer.com/
+- [Brooke Bond (HUL)](https://www.india-selection.com/b-packaged-food-brookebond.html): Red Label, Taj Mahal & more (Packaged Food) — official site: https://www.hul.co.in/
+- [Wagh Bakri](https://www.india-selection.com/b-packaged-food-waghbakri.html): Gujarat's beloved blend (Packaged Food) — official site: https://www.waghbakri.com/
+- [Wai Wai (CG Foods)](https://www.india-selection.com/b-packaged-food-waivai.html): The eat-raw favourite noodle (Packaged Food) — official site: https://www.waiwai.in/
+- [Patanjali Ayurved](https://www.india-selection.com/b-packaged-food-patanjali.html): Ayurvedic, desi instant meals (Packaged Food) — official site: https://www.patanjaliayurved.net/
+- [Unifly Private Limited](https://www.india-selection.com/brand-unifly.html): insulated drinkware brand profile
+- [Milton](https://www.india-selection.com/brand-milton.html): insulated drinkware brand profile
+- [Cello](https://www.india-selection.com/brand-cello.html): insulated drinkware brand profile
+- [Borosil](https://www.india-selection.com/brand-borosil.html): insulated drinkware brand profile
+- [Tupperware India](https://www.india-selection.com/brand-tupperware.html): insulated drinkware brand profile
+- [Pexpo](https://www.india-selection.com/brand-pexpo.html): insulated drinkware brand profile
+- [HYV](https://www.india-selection.com/brand-hyv.html): insulated drinkware brand profile
+- [Nirlon Kitchenware](https://www.india-selection.com/brand-nirlon.html): insulated drinkware brand profile
+- [Vaya](https://www.india-selection.com/brand-vaya.html): insulated drinkware brand profile
+- [InstaCuppa](https://www.india-selection.com/brand-instacuppa.html): insulated drinkware brand profile
+- [SOLARA](https://www.india-selection.com/brand-solara.html): insulated drinkware brand profile
+
+## Rankings & editorial
+
+- [Rankings](https://www.india-selection.com/rankings.html): editorial, unpaid category rankings
+- [Sitemap](https://www.india-selection.com/sitemap.xml)
+
