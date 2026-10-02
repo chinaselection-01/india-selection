@@ -258,7 +258,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/appliances/bajaj/hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -267,7 +267,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/appliances/bajaj/hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -276,7 +276,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/appliances/havells/hero.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -285,7 +285,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/appliances/crompton/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -294,7 +294,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/appliances/ifb/hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -303,7 +303,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/appliances/voltas/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -312,7 +312,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/appliances/atomberg/hero.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -321,7 +321,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/electronics/boat/hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -330,7 +330,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/electronics/boat/hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -339,7 +339,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/electronics/noise/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -348,7 +348,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/electronics/fireboltt/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -357,7 +357,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/electronics/lava/hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -366,7 +366,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/electronics/micromax/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -384,7 +384,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/bedding/sleepwell/hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -393,7 +393,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/bedding/sleepwell/hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -402,7 +402,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/bedding/kurlon/hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -411,7 +411,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/bedding/wakefit/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -420,7 +420,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/bedding/sleepcompany/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -429,7 +429,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/bedding/spaces/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -438,7 +438,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/bedding/bombaydyeing/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -447,7 +447,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/homeware/hawkins/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -456,7 +456,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/homeware/hawkins/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -465,7 +465,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/homeware/pigeon/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -474,7 +474,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/homeware/signoraware/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -483,7 +483,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/homeware/nayasa/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -492,7 +492,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/homeware/bergner/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -501,7 +501,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/homeware/vinod/1.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -510,7 +510,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/cadbury/hero.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -519,7 +519,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/cadbury/hero.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -528,7 +528,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/amul/hero.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -537,7 +537,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/nestle/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -546,7 +546,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/maggi/hero.svg</image:loc>
     </image:image>
   </url>
   <url>
@@ -555,7 +555,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/parle/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -564,7 +564,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/itc/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -573,7 +573,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/perfetti/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -582,7 +582,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/ds/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -591,7 +591,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/lotte/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -600,7 +600,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/britannia/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -609,7 +609,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/priyagold/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -618,7 +618,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/haldiram/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -627,7 +627,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/lays/1-hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -636,7 +636,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/balaji/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -645,7 +645,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/bikanervala/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -654,7 +654,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/tatatea/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -663,7 +663,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/brookebond/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -672,7 +672,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/waghbakri/1-hero.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -681,7 +681,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/waivai/1-hero.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -690,7 +690,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://india-selection.com/assets/brand-range.jpg</image:loc>
+      <image:loc>https://india-selection.com/assets/brands/packaged-food/patanjali/1-hero.jpg</image:loc>
     </image:image>
   </url>
 </urlset>

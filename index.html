@@ -58,6 +58,29 @@ img{max-width:100%;display:block}
 .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
 .btn-ghost:hover{border-color:var(--green)}
 
+/* hero carousel */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.hero{padding:44px 0 40px}
+.carousel{position:relative;overflow:hidden;border-radius:22px}
+.car-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.slide{flex:0 0 100%;min-width:100%;box-sizing:border-box;padding:38px 34px;border-radius:22px;
+  background:linear-gradient(135deg,var(--c1,#FFF3E3),var(--c2,#FDE7CC));display:flex;flex-direction:column;align-items:flex-start}
+.slide .sponsored{display:inline-flex;align-items:center;gap:6px;background:rgba(43,33,24,.82);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 12px;border-radius:30px;margin-bottom:14px}
+.slide .brand{font-size:clamp(30px,4.6vw,50px);line-height:1.06;font-weight:800;margin:0;color:var(--ink)}
+.slide .pitch{margin-top:14px;max-width:660px;color:var(--ink-soft);font-size:17px}
+.slide .cta-row{margin-top:22px}
+.car-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line);background:rgba(255,255,255,.92);cursor:pointer;font-size:22px;line-height:1;color:var(--ink);
+  display:grid;place-items:center;z-index:3;box-shadow:var(--shadow-sm);transition:.2s}
+.car-btn:hover{background:#fff;color:var(--saffron-dark)}
+.car-prev{left:12px}.car-next{right:12px}
+.dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:3}
+.dot{width:10px;height:10px;border-radius:50%;border:none;background:rgba(43,33,24,.26);cursor:pointer;padding:0;transition:.2s}
+.dot.active{background:var(--saffron-dark);width:26px;border-radius:6px}
+.hero-foot{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.car-btn{display:none}.slide{padding:30px 22px}}
+
 /* category nav chips */
 .catnav{padding:26px 0 0}
 .catnav .chips{display:flex;flex-wrap:wrap;gap:10px}
@@ -555,19 +578,45 @@ footer{background:#221A12;color:#E9DFD2;padding:34px 0;margin-top:40px}
 </header>
 <section class="hero">
   <div class="wrap">
-    <span class="badge"><span>🇮🇳</span><span data-en="55 Indian brands · 6 categories" data-hi="55 भारतीय ब्रांड · 6 श्रेणियाँ">55 Indian brands · 6 categories</span></span>
-    <h1 data-en="The &lt;span class=&#x27;accent&#x27;&gt;curated&lt;/span&gt; selection of Indian goods." data-hi="भारतीय वस्तुओं का &lt;span class=&#x27;accent&#x27;&gt;चुनिंदा&lt;/span&gt; चयन।">The <span class="accent">curated</span> selection of Indian goods.</h1>
-    <p class="lead" data-en="We research, rank and present trusted Indian brands — from market leaders to rising D2C names — across appliances, electronics, homeware, bedding, food and drinkware. Every brand has real product photos and an editorial profile." data-hi="हम भरोसेमंद भारतीय ब्रांडों को खोजते, रैंक करते और प्रस्तुत करते हैं — बाज़ार लीडर से लेकर उभरते D2C नाम तक।">We research, rank and present trusted Indian brands — from market leaders to rising D2C names — across appliances, electronics, homeware, bedding, food and drinkware. Every brand has real product photos and an editorial profile.</p>
-    <div class="meta">
-      <span data-en="Home Appliances" data-hi="होम अप्लायंसेज़">Home Appliances</span>
-      <span data-en="Consumer Electronics" data-hi="कंज़्यूमर इलेक्ट्रॉनिक्स">Consumer Electronics</span>
-      <span data-en="Home &amp; Kitchenware" data-hi="होम और किचनवेयर">Home &amp; Kitchenware</span>
-      <span data-en="Bedding" data-hi="बेडिंग">Bedding</span>
-      <span data-en="Packaged Food" data-hi="पैकेज्ड फ़ूड">Packaged Food</span>
-      <span data-en="Drinkware" data-hi="ड्रिंकवेयर">Drinkware</span>
+    <h1 class="sr-only" data-en="India Selection — Curated Indian Brands and Products" data-hi="इंडिया सिलेक्शन — चुनिंदा भारतीय ब्रांड और उत्पाद">India Selection — Curated Indian Brands and Products</h1>
+        <div class="carousel" id="heroCarousel">
+      <div class="car-track">
+      <div class="slide" style="--c1:#FFF1E6;--c2:#FCE0C8">
+        <span class="sponsored" data-en="Sponsored" data-hi="प्रायोजित">Sponsored</span>
+        <h2 class="brand" data-en="Milton" data-hi="Milton">Milton</h2>
+        <p class="pitch" data-en="India&#x27;s most trusted name in insulated bottles, flasks &amp; sippers." data-hi="इन्सुलेटेड बोतल, फ्लास्क और सिपर में भारत का सबसे भरोसेमंद नाम।">India&#x27;s most trusted name in insulated bottles, flasks &amp; sippers.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="brand-milton.html" data-en="Explore Milton →" data-hi="Explore Milton →">Explore Milton →</a></div>
+      </div>
+      <div class="slide" style="--c1:#EAF2FF;--c2:#D6E6FF">
+        <span class="sponsored" data-en="Sponsored" data-hi="प्रायोजित">Sponsored</span>
+        <h2 class="brand" data-en="Cello" data-hi="Cello">Cello</h2>
+        <p class="pitch" data-en="Design-forward bottles, thermoware &amp; sippers for everyday life." data-hi="रोज़मर्रा की ज़िंदगी के लिए डिज़ाइन-फॉरवर्ड बोतल, थर्मोवेयर और सिपर।">Design-forward bottles, thermoware &amp; sippers for everyday life.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="brand-cello.html" data-en="Explore Cello →" data-hi="Explore Cello →">Explore Cello →</a></div>
+      </div>
+      <div class="slide" style="--c1:#E9F6EF;--c2:#CFEEDD">
+        <span class="sponsored" data-en="Sponsored" data-hi="प्रायोजित">Sponsored</span>
+        <h2 class="brand" data-en="Borosil" data-hi="Borosil">Borosil</h2>
+        <p class="pitch" data-en="Glass &amp; stainless drinkware, trusted in Indian homes since 1964." data-hi="काँच और स्टेनलेस ड्रिंकवेयर, 1964 से भारतीय घरों में भरोसेमंद।">Glass &amp; stainless drinkware, trusted in Indian homes since 1964.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="brand-borosil.html" data-en="Explore Borosil →" data-hi="Explore Borosil →">Explore Borosil →</a></div>
+      </div>
+      <div class="slide" style="--c1:#FEF3E0;--c2:#FBE3C0">
+        <span class="sponsored" data-en="Sponsored" data-hi="प्रायोजित">Sponsored</span>
+        <h2 class="brand" data-en="Pexpo" data-hi="Pexpo">Pexpo</h2>
+        <p class="pitch" data-en="100% stainless-steel bottles, made in India for the long run." data-hi="100% स्टेनलेस-स्टील बोतल, लंबे समय के लिए भारत में बनी।">100% stainless-steel bottles, made in India for the long run.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="brand-pexpo.html" data-en="Explore Pexpo →" data-hi="Explore Pexpo →">Explore Pexpo →</a></div>
+      </div>
+      </div>
+      <button class="car-btn car-prev" aria-label="previous">‹</button>
+      <button class="car-btn car-next" aria-label="next">›</button>
+      <div class="dots">
+        <button class="dot active" data-i="0" aria-label="slide 1"></button>
+        <button class="dot" data-i="1" aria-label="slide 2"></button>
+        <button class="dot" data-i="2" aria-label="slide 3"></button>
+        <button class="dot" data-i="3" aria-label="slide 4"></button>
+      </div>
     </div>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#cat-0" data-en="Browse brands →" data-hi="ब्रांड ब्राउज़ करें →">Browse brands →</a>
+    <div class="hero-foot">
+      <a class="btn btn-ghost" href="#cat-0" data-en="Browse all brands →" data-hi="सभी ब्रांड ब्राउज़ करें →">Browse all brands →</a>
       <a class="btn btn-ghost" href="rankings.html" data-en="See rankings →" data-hi="रैंकिंग देखें →">See rankings →</a>
       <a class="btn btn-ghost" href="gifting.html" data-en="Corporate gifting →" data-hi="कॉर्पोरेट उपहार →">Corporate gifting →</a>
     </div>
@@ -1347,6 +1396,16 @@ footer{background:#221A12;color:#E9DFD2;padding:34px 0;margin-top:40px}
       <a href="categories.html" data-en="Browse categories →" data-hi="श्रेणियाँ ब्राउज़ करें →">Browse categories →</a><br/>
       <a href="rankings.html" data-en="See rankings →" data-hi="रैंकिंग देखें →">See rankings →</a>
     </div>
+    <div style="flex:1 1 100%;border-top:1px solid rgba(255,255,255,.12);margin-top:18px;padding-top:14px">
+<div style="font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:#C9BBA8;margin-bottom:9px">Our Network &#183; 兄弟站点</div>
+<div style="display:flex;flex-wrap:wrap;gap:7px 20px">
+<a href="https://china-selection.com/" style="color:#E9DFD2;text-decoration:none">China Selection</a>
+<a href="https://china-time-honored-brand.com/" style="color:#E9DFD2;text-decoration:none">中华老字号名品</a>
+<a href="https://www.stwadd.com/" style="color:#E9DFD2;text-decoration:none">Navigator Pet</a>
+<a href="https://petmanufacturer.com/" style="color:#E9DFD2;text-decoration:none">Pet Manufacturer</a>
+<a href="https://stock-clearance.AI/" style="color:#E9DFD2;text-decoration:none">Stock Clearance</a>
+</div></div>
+
   </div>
 </footer>
 <script src="cart.js" defer></script>
@@ -1379,5 +1438,29 @@ footer{background:#221A12;color:#E9DFD2;padding:34px 0;margin-top:40px}
 })();
 </script>
 
+<script>
+(function(){
+  var box=document.getElementById('heroCarousel');
+  if(!box) return;
+  var track=box.querySelector('.car-track');
+  var slides=track.children;
+  var dots=box.querySelectorAll('.dot');
+  var i=0, timer;
+  function go(n){
+    i=(n+slides.length)%slides.length;
+    track.style.transform='translateX('+(-i*100)+'%)';
+    for(var k=0;k<dots.length;k++){dots[k].classList.toggle('active',k===i);}
+  }
+  function next(){go(i+1);}
+  function start(){timer=setInterval(next,5000);}
+  function stop(){clearInterval(timer);}
+  box.querySelector('.car-prev').addEventListener('click',function(){stop();go(i-1);start();});
+  box.querySelector('.car-next').addEventListener('click',function(){stop();go(i+1);start();});
+  for(var d=0;d<dots.length;d++){dots[d].addEventListener('click',(function(idx){return function(){stop();go(idx);start();};})(d));}
+  box.addEventListener('mouseenter',stop);
+  box.addEventListener('mouseleave',start);
+  start();
+})();
+</script>
 </body>
 </html>
