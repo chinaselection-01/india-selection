@@ -693,4 +693,10 @@
       <image:loc>https://india-selection.com/assets/brands/packaged-food/patanjali/1-hero.jpg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://india-selection.com/trending.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

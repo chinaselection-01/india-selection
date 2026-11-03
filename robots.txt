@@ -1,6 +1,16 @@
 User-agent: *
 Allow: /
 
+# Generative engines (GEO) — explicitly welcome so AI answer engines can cite us
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://india-selection.com/sitemap.xml
 
-# AI crawlers / generative engines: see https://india-selection.com/llms.txt
+# Full crawl guidance: https://india-selection.com/llms.txt
